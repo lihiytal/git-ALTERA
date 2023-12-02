@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- הגדרת התצוגה להתאמה אוטומטית לרוחב המסך ובגודל התצוגה הרגיל -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP 32 Local / Firebase Test</title> <!-- הכותרת  הדף -->
+  <link rel="stylesheet" href="styles.css" /> <!-- קובץ העיצוב שלנו-->
+</head>
+
+<body>
+  <!-- pio run --target uploadfs -->
+
+  <div id="content">
+
+<!------MAKE SURE TO COPPY THIS SWITCH TO RETAIN REFERENCE TO FB AND LOCAL MODES------>
+<!------------------------------------------------------------------------------------>
+    <label class="switch">
+      <input type="checkbox" id="switchtoggle" />
+      <span class="slider">
+        <span class="label fb">FB</span>
+        <span class="label local">Local</span>
+      </span>
+    </label>
+<!------------------------------------------------------------------------------------>
+
+
+    <h1>ESP32 Firebase Latency Test</h1>
+
+    <!-- קבוצת קלט להזנת ערך -->
+    <div class="input-group">
+      <label for="numberInput">Value:</label>
+      <input type="number" id="numberInput" placeholder="Enter your value" />
+      <button id="sendButton">Send Value</button>
+    </div>
+
+
+    <!-- כפתור לאיפוס הלוג -->
+    <button id="clear">Clear Log</button>
+
+
+    <!-- תיבה להצגת עדכונים -->
+    <div id="output"></div>
+    <!--דוגמא לפרוייקט -->
+    <div id="projectExmaple">
+      <div class="runtime-container">
+        <label for="textOutput">Runtime: </label>
+        <span id="textOutput"></span>
+        <label for="textOutput1">Value: </label>
+        <span id="textOutput1"></span>
+      </div>
+      <button id="send5Button">Send 5</button>
+      <button id="send1Button">Send 1</button>
+
+    </div>
+    <!-- הכללת ספריות הפיירבייס -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <!-- הכללת הסקריפט הראשי שלנו -->
+    <script src="script.js"></script>
+
+
+    <script>
+      //שימו לב שנקראות כאן פונקציות ומשתנים שקיימים בקובץ הסקריפט
+      const textOutput = document.getElementById("textOutput");//קישור משתנה לאובייקט HTML
+      const textOutput1 = document.getElementById("textOutput1");//קישור משתנה לאובייקט HTML
+      const send5Button = document.getElementById("send5Button");
+      const send1Button = document.getElementById("send1Button");
+      const numberInput = document.getElementById("numberInput");
+      const sendButton = document.getElementById("sendButton");
+      const logDiv = document.getElementById("output");//OUTPUT LOG
+      const clear = document.getElementById("clear");
+      const sendToESPButton = document.getElementById("sendToESPButton");
+
+
+
+      //פונקציות שנקראות כשהכפתורים נלחצים
+      send5Button.addEventListener("click", () => {
+        let number = 5;
+        sendValue(number,"/user/input");
+      });
+      
+      
+      send1Button.addEventListener("click", () => {
+        let number = 1;
+        sendValue(number,"/user/input");
+      });
+      
+      //SEND INPUT BOX VALUE
+      sendButton.addEventListener("click", () => {
+        let number = numberInput.value.trim();
+        sendValue(number,"user/input");
+      });
+
+
+      //CLEAR LOG BUTTON
+      clear.addEventListener("click", () => {
+        logDiv.innerHTML = "";
+      });
+
+      textOutput.textContent = 0;//איפוס ערך 
+      textOutput1.textContent = 0;//איפוס ערך 
+
+      //Initiate the SSE links
+      var rxSource = new EventSource('/rx');// Create event source at /RX
+      var runtimeSource = new EventSource('/runtime');// Create event source at /runtime
+
+
+        //THIS RUNS WHEN THERE WAS AN UPDATE AT /esp/uptime IN FIREBASE//
+        ////////////////////////////////////////////////////////////////
+      database.ref("/esp/uptime").on("value", (snapshot) => {
+        if (mode == "FB"){
+          const firebaseRuntimeValue = snapshot.val();
+          textOutput.textContent = firebaseRuntimeValue;
+        }
+      });
+      ////////////////////////////////////////////////////////////////
+      
+
+      //THIS RUNS WHEN THERE WAS AN UPDATE IN THE RUNTIME WEBSOCKET//
+      //////////////////////////////////////////////////////////////
+      runtimeSource.onmessage = function(event) {
+        if (mode == "Local")
+        {
+            const localRuntimeValue = event.data;//store the variable
+            textOutput.textContent = localRuntimeValue;
+        }
+      };
+      //////////////////////////////////////////////////////////////
+      
+      //THIS RUNS WHEN THERE WAS AN UPDATE AT /esp/rx IN FIREBASE//
+      ////////////////////////////////////////////////////////////
+      database.ref("/esp/rx").on("value", (snapshot) => {
+          if (mode == "FB"){// if we're in firebase mode
+          const firebaseRX = snapshot.val();//store the variable
+          textOutput1.textContent = firebaseRX;//set it in the text box
+          printToLog(firebaseRX, "fb-RX");//print it to the log
+          }
+        });
+      ////////////////////////////////////////////////////////////
+      
+      //THIS RUNS WHEN THERE WAS A SERVERSIDE EVENT AT /RX//
+      ///////////////////////////////////////////////////////////
+        rxSource.onmessage = function(event) {
+          if (mode == "Local")
+          {
+            const localRX = event.data;
+            textOutput1.textContent = localRX;
+            printToLog(localRX,"esp-direct-in");
+          }
+        };
+      /////////////////////////////////////////////////////////////
+    
+    </script>
+
+
+</body>
+
+</html>

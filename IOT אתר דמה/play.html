@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Settings</title>
+    <link rel="stylesheet" href="css/Si.css">
+    <link rel="stylesheet" href="css/stylenew.css">
+    <link rel="icon" href="">
+</head>
+
+<body>
+    <header>
+        <h1 id="up">Digital musical instrument</h1>
+        <nav class="high">
+            <a href="indexnew.html">Home</a>
+            <a href="play.html">Melody Settings</a>
+            <a href="components.html">Components</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <img class="logo" src="" alt="">
+            <p>Melody Settings</p>
+            <div class="container">
+                <h2 id="l">Login or Sign</h2>
+                <button id="ll" onclick="window.location.href='login.html'">Login</button>
+                <button id="ll" onclick="window.location.href='sign.html'">Sign</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Melody Settings</h1>
+        <form>
+            <div class="row">
+                <div dir="ltr" class="side g">
+                <label><h4>What colors would you like in the LED ring?</h4></label>
+                    <div id="mar">
+                        <label><input type="checkbox">Blue</label>
+                        <label><input type="checkbox">Red</label>
+                        <label><input type="checkbox">Green</label>
+                        <label><input type="checkbox">Yellow</label>
+                    </div>
+                </div>
+                <div dir="ltr" class="side g">
+                    <label><h4>What instrument would you like to play?</h4></label>
+                        <div id="mar">
+                            <label><input type="radio" name="contact">Piano</label>
+                            <label><input type="radio" name="contact">Guitar</label>
+                        </div>
+                </div>
+            </div>
+        </form>
+        <div class="row ">
+            <div>
+                <label></label>
+                <select onchange="select()"  id="sVal">
+                    <option value="0">tav</option>
+                    <option value="1">distance</option>
+                </select>
+            </div>
+           
+            <h2 id="name">distance:</h2>
+            <h2 id="distance"></h2>
+
+            <div class="piano">
+                <div class="key" id="1"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="2"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="3"></div>
+                <div class="key"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="4"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="5"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="6"></div>
+                <div class="key"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="7"></div>
+                <div class="key" id="black"></div>
+                <div class="key" id="8"></div>
+            </div>
+        </div>
+        <a class="caftor" href="#up">Click here to go up</a>
+    </main>
+    <nav class="low">
+        <a href="indexnew.html">Home</a>
+        <a href="play.html">Melody Settings</a>
+        <a href="components.html">Components</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <img class="logo" src="" alt="">
+        <p>Melody Settings</p>
+    </nav>
+    <footer>
+        <h1>About Us</h1>
+        <h4>We have a vision to create a connection between music and electronics, and a desire to create music with our electronic knowledge <br>
+        and experience music in ways we never thought we could experience.</h4>
+        <h4>
+            Come join us on this journey. We hope you will experience this journey in a unique way!
+        </h4>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database-compat.js"></script>
+    <script src="J.S/play.js"></script>
+</body>
