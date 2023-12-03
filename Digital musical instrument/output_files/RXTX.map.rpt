@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RXTX
-Sat Dec 02 21:33:29 2023
+Sun Dec 03 17:13:55 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 02 21:33:29 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 03 17:13:55 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RXTX                                        ;
 ; Top-level Entity Name              ; rxtx                                        ;
@@ -164,33 +164,32 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------+---------+
-; tx.vhd                           ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/tx.vhd                       ;         ;
-; my_rx.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/my_rx.vhd                    ;         ;
-; half8.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/half8.vhd                    ;         ;
-; clkdiv.vhd                       ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/clkdiv.vhd                   ;         ;
-; boud.vhd                         ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/boud.vhd                     ;         ;
-; rxtx.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/rxtx.bdf                     ;         ;
-; bin2hex.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin2hex.vhd                  ;         ;
-; dis_meter_sm.vhd                 ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/dis_meter_sm.vhd             ;         ;
-; clk_div_58msec.vhd               ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/clk_div_58msec.vhd           ;         ;
-; padding.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/padding.vhd                  ;         ;
-; output_files/mux_dis_tav.vhd     ; yes             ; User VHDL File                           ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/output_files/mux_dis_tav.vhd ;         ;
-; hc-sr04.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/hc-sr04.bdf                  ;         ;
-; trigger.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/trigger.vhd                  ;         ;
-; keyboard.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/keyboard.bdf                 ;         ;
-; sound_div.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/sound_div.vhd                ;         ;
-; p_encoder.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/p_encoder.vhd                ;         ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
+; tx.vhd                           ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/tx.vhd                       ;         ;
+; my_rx.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/my_rx.vhd                    ;         ;
+; half8.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/half8.vhd                    ;         ;
+; clkdiv.vhd                       ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/clkdiv.vhd                   ;         ;
+; boud.vhd                         ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/boud.vhd                     ;         ;
+; rxtx.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/LIHI/git/Digital musical instrument/rxtx.bdf                     ;         ;
+; bin2hex.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/bin2hex.vhd                  ;         ;
+; dis_meter_sm.vhd                 ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/dis_meter_sm.vhd             ;         ;
+; clk_div_58msec.vhd               ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/clk_div_58msec.vhd           ;         ;
+; padding.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/padding.vhd                  ;         ;
+; output_files/mux_dis_tav.vhd     ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/output_files/mux_dis_tav.vhd ;         ;
+; hc-sr04.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/LIHI/git/Digital musical instrument/hc-sr04.bdf                  ;         ;
+; trigger.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/trigger.vhd                  ;         ;
+; keyboard.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/LIHI/git/Digital musical instrument/keyboard.bdf                 ;         ;
+; sound_div.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/sound_div.vhd                ;         ;
+; p_encoder.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/p_encoder.vhd                ;         ;
++----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -331,7 +330,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -341,90 +340,90 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 02 21:33:12 2023
+    Info: Processing started: Sun Dec 03 17:13:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RXTX -c RXTX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file tx.vhd
-    Info (12022): Found design unit 1: TX-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/tx.vhd Line: 10
-    Info (12023): Found entity 1: TX File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/tx.vhd Line: 4
+    Info (12022): Found design unit 1: TX-behave File: C:/LIHI/git/Digital musical instrument/tx.vhd Line: 10
+    Info (12023): Found entity 1: TX File: C:/LIHI/git/Digital musical instrument/tx.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
-    Info (12022): Found design unit 1: ayelet_rX-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/rx.vhd Line: 12
-    Info (12023): Found entity 1: ayelet_rX File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/rx.vhd Line: 5
+    Info (12022): Found design unit 1: ayelet_rX-behave File: C:/LIHI/git/Digital musical instrument/rx.vhd Line: 12
+    Info (12023): Found entity 1: ayelet_rX File: C:/LIHI/git/Digital musical instrument/rx.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file my_rx.vhd
-    Info (12022): Found design unit 1: my_rX-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/my_rx.vhd Line: 12
-    Info (12023): Found entity 1: my_rX File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/my_rx.vhd Line: 5
+    Info (12022): Found design unit 1: my_rX-behave File: C:/LIHI/git/Digital musical instrument/my_rx.vhd Line: 12
+    Info (12023): Found entity 1: my_rX File: C:/LIHI/git/Digital musical instrument/my_rx.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lpf.vhd
-    Info (12022): Found design unit 1: lpf-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/lpf.vhd Line: 7
-    Info (12023): Found entity 1: lpf File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/lpf.vhd Line: 3
+    Info (12022): Found design unit 1: lpf-behave File: C:/LIHI/git/Digital musical instrument/lpf.vhd Line: 7
+    Info (12023): Found entity 1: lpf File: C:/LIHI/git/Digital musical instrument/lpf.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file half8.vhd
-    Info (12022): Found design unit 1: half8-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/half8.vhd Line: 10
-    Info (12023): Found entity 1: half8 File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/half8.vhd Line: 4
+    Info (12022): Found design unit 1: half8-behave File: C:/LIHI/git/Digital musical instrument/half8.vhd Line: 10
+    Info (12023): Found entity 1: half8 File: C:/LIHI/git/Digital musical instrument/half8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file disp_mux.vhd
-    Info (12022): Found design unit 1: disp_mux-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/disp_mux.vhd Line: 8
-    Info (12023): Found entity 1: disp_mux File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/disp_mux.vhd Line: 3
+    Info (12022): Found design unit 1: disp_mux-behave File: C:/LIHI/git/Digital musical instrument/disp_mux.vhd Line: 8
+    Info (12023): Found entity 1: disp_mux File: C:/LIHI/git/Digital musical instrument/disp_mux.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file clkdiv.vhd
-    Info (12022): Found design unit 1: clkdiv-b File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/clkdiv.vhd Line: 7
-    Info (12023): Found entity 1: clkdiv File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/clkdiv.vhd Line: 3
+    Info (12022): Found design unit 1: clkdiv-b File: C:/LIHI/git/Digital musical instrument/clkdiv.vhd Line: 7
+    Info (12023): Found entity 1: clkdiv File: C:/LIHI/git/Digital musical instrument/clkdiv.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file boud.vhd
-    Info (12022): Found design unit 1: boud-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/boud.vhd Line: 10
-    Info (12023): Found entity 1: boud File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/boud.vhd Line: 6
+    Info (12022): Found design unit 1: boud-behave File: C:/LIHI/git/Digital musical instrument/boud.vhd Line: 10
+    Info (12023): Found entity 1: boud File: C:/LIHI/git/Digital musical instrument/boud.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file bin2dex.vhd
-    Info (12022): Found design unit 1: bin2dex-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin2dex.vhd Line: 8
-    Info (12023): Found entity 1: bin2dex File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin2dex.vhd Line: 3
+    Info (12022): Found design unit 1: bin2dex-behave File: C:/LIHI/git/Digital musical instrument/bin2dex.vhd Line: 8
+    Info (12023): Found entity 1: bin2dex File: C:/LIHI/git/Digital musical instrument/bin2dex.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file bin_hex_display.vhd
-    Info (12022): Found design unit 1: bin_hex_display-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin_hex_display.vhd Line: 8
-    Info (12023): Found entity 1: bin_hex_display File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin_hex_display.vhd Line: 4
+    Info (12022): Found design unit 1: bin_hex_display-behave File: C:/LIHI/git/Digital musical instrument/bin_hex_display.vhd Line: 8
+    Info (12023): Found entity 1: bin_hex_display File: C:/LIHI/git/Digital musical instrument/bin_hex_display.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rxtx.bdf
     Info (12023): Found entity 1: rxtx
 Info (12021): Found 2 design units, including 1 entities, in source file bin2hex.vhd
-    Info (12022): Found design unit 1: bin2hex-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin2hex.vhd Line: 8
-    Info (12023): Found entity 1: bin2hex File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/bin2hex.vhd Line: 3
+    Info (12022): Found design unit 1: bin2hex-behave File: C:/LIHI/git/Digital musical instrument/bin2hex.vhd Line: 8
+    Info (12023): Found entity 1: bin2hex File: C:/LIHI/git/Digital musical instrument/bin2hex.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file counter_x.vhd
-    Info (12022): Found design unit 1: counter_x-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/counter_x.vhd Line: 8
-    Info (12023): Found entity 1: counter_x File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/counter_x.vhd Line: 3
+    Info (12022): Found design unit 1: counter_x-behave File: C:/LIHI/git/Digital musical instrument/counter_x.vhd Line: 8
+    Info (12023): Found entity 1: counter_x File: C:/LIHI/git/Digital musical instrument/counter_x.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file data_controller.vhd
-    Info (12022): Found design unit 1: data_controller-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/data_controller.vhd Line: 14
-    Info (12023): Found entity 1: data_controller File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/data_controller.vhd Line: 3
+    Info (12022): Found design unit 1: data_controller-behave File: C:/LIHI/git/Digital musical instrument/data_controller.vhd Line: 14
+    Info (12023): Found entity 1: data_controller File: C:/LIHI/git/Digital musical instrument/data_controller.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file pwm_motor.vhd
-    Info (12022): Found design unit 1: pwm_motor-b File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/pwm_motor.vhd Line: 8
-    Info (12023): Found entity 1: pwm_motor File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/pwm_motor.vhd Line: 3
+    Info (12022): Found design unit 1: pwm_motor-b File: C:/LIHI/git/Digital musical instrument/pwm_motor.vhd Line: 8
+    Info (12023): Found entity 1: pwm_motor File: C:/LIHI/git/Digital musical instrument/pwm_motor.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file pwm_motors.vhd
-    Info (12022): Found design unit 1: pwm_motors-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/pwm_motors.vhd Line: 9
-    Info (12023): Found entity 1: pwm_motors File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/pwm_motors.vhd Line: 3
+    Info (12022): Found design unit 1: pwm_motors-behave File: C:/LIHI/git/Digital musical instrument/pwm_motors.vhd Line: 9
+    Info (12023): Found entity 1: pwm_motors File: C:/LIHI/git/Digital musical instrument/pwm_motors.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file servo_degree.vhd
-    Info (12022): Found design unit 1: servo_degree-b File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/servo_degree.vhd Line: 8
-    Info (12023): Found entity 1: servo_degree File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/servo_degree.vhd Line: 3
+    Info (12022): Found design unit 1: servo_degree-b File: C:/LIHI/git/Digital musical instrument/servo_degree.vhd Line: 8
+    Info (12023): Found entity 1: servo_degree File: C:/LIHI/git/Digital musical instrument/servo_degree.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file triger_ctrl.vhd
-    Info (12022): Found design unit 1: triger_ctrl-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/triger_ctrl.vhd Line: 7
-    Info (12023): Found entity 1: triger_ctrl File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/triger_ctrl.vhd Line: 3
+    Info (12022): Found design unit 1: triger_ctrl-behave File: C:/LIHI/git/Digital musical instrument/triger_ctrl.vhd Line: 7
+    Info (12023): Found entity 1: triger_ctrl File: C:/LIHI/git/Digital musical instrument/triger_ctrl.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file dis_meter_sm.vhd
-    Info (12022): Found design unit 1: dis_meter_sm-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/dis_meter_sm.vhd Line: 8
-    Info (12023): Found entity 1: dis_meter_sm File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/dis_meter_sm.vhd Line: 4
+    Info (12022): Found design unit 1: dis_meter_sm-behave File: C:/LIHI/git/Digital musical instrument/dis_meter_sm.vhd Line: 8
+    Info (12023): Found entity 1: dis_meter_sm File: C:/LIHI/git/Digital musical instrument/dis_meter_sm.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div_58msec.vhd
-    Info (12022): Found design unit 1: clk_div_58msec-b File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/clk_div_58msec.vhd Line: 7
-    Info (12023): Found entity 1: clk_div_58msec File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/clk_div_58msec.vhd Line: 3
+    Info (12022): Found design unit 1: clk_div_58msec-b File: C:/LIHI/git/Digital musical instrument/clk_div_58msec.vhd Line: 7
+    Info (12023): Found entity 1: clk_div_58msec File: C:/LIHI/git/Digital musical instrument/clk_div_58msec.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file swith_srf.vhd
-    Info (12022): Found design unit 1: switch_SRF-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/swith_SRF.vhd Line: 10
-    Info (12023): Found entity 1: switch_SRF File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/swith_SRF.vhd Line: 3
+    Info (12022): Found design unit 1: switch_SRF-behave File: C:/LIHI/git/Digital musical instrument/swith_SRF.vhd Line: 10
+    Info (12023): Found entity 1: switch_SRF File: C:/LIHI/git/Digital musical instrument/swith_SRF.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file piazo.vhd
-    Info (12022): Found design unit 1: piazo-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/piazo.vhd Line: 8
-    Info (12023): Found entity 1: piazo File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/piazo.vhd Line: 3
+    Info (12022): Found design unit 1: piazo-behave File: C:/LIHI/git/Digital musical instrument/piazo.vhd Line: 8
+    Info (12023): Found entity 1: piazo File: C:/LIHI/git/Digital musical instrument/piazo.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file my_pll.vhd
-    Info (12022): Found design unit 1: my_pll-SYN File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/my_pll.vhd Line: 52
-    Info (12023): Found entity 1: my_pll File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/my_pll.vhd Line: 43
+    Info (12022): Found design unit 1: my_pll-SYN File: C:/LIHI/git/Digital musical instrument/my_pll.vhd Line: 52
+    Info (12023): Found entity 1: my_pll File: C:/LIHI/git/Digital musical instrument/my_pll.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file mpu6050_ctrl.vhd
-    Info (12022): Found design unit 1: mpu6050_ctrl-SOLUCION File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/mpu6050_ctrl.vhd Line: 22
-    Info (12023): Found entity 1: mpu6050_ctrl File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/mpu6050_ctrl.vhd Line: 6
+    Info (12022): Found design unit 1: mpu6050_ctrl-SOLUCION File: C:/LIHI/git/Digital musical instrument/mpu6050_ctrl.vhd Line: 22
+    Info (12023): Found entity 1: mpu6050_ctrl File: C:/LIHI/git/Digital musical instrument/mpu6050_ctrl.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file divider12mhz.vhd
-    Info (12022): Found design unit 1: divider12MHz-Behavioral File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/divider12MHz.vhd Line: 11
-    Info (12023): Found entity 1: divider12MHz File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/divider12MHz.vhd Line: 5
+    Info (12022): Found design unit 1: divider12MHz-Behavioral File: C:/LIHI/git/Digital musical instrument/divider12MHz.vhd Line: 11
+    Info (12023): Found entity 1: divider12MHz File: C:/LIHI/git/Digital musical instrument/divider12MHz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file padding.vhd
-    Info (12022): Found design unit 1: padding-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/padding.vhd Line: 9
-    Info (12023): Found entity 1: padding File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/padding.vhd Line: 4
+    Info (12022): Found design unit 1: padding-behave File: C:/LIHI/git/Digital musical instrument/padding.vhd Line: 9
+    Info (12023): Found entity 1: padding File: C:/LIHI/git/Digital musical instrument/padding.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/mux_dis_tav.vhd
-    Info (12022): Found design unit 1: mux_dis_tav-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/output_files/mux_dis_tav.vhd Line: 10
-    Info (12023): Found entity 1: mux_dis_tav File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/output_files/mux_dis_tav.vhd Line: 4
+    Info (12022): Found design unit 1: mux_dis_tav-behave File: C:/LIHI/git/Digital musical instrument/output_files/mux_dis_tav.vhd Line: 10
+    Info (12023): Found entity 1: mux_dis_tav File: C:/LIHI/git/Digital musical instrument/output_files/mux_dis_tav.vhd Line: 4
 Info (12127): Elaborating entity "rxtx" for the top level hierarchy
 Warning (275009): Pin "data_in" not connected
 Info (12128): Elaborating entity "TX" for hierarchy "TX:inst6"
@@ -435,8 +434,8 @@ Warning (12125): Using design file hc-sr04.bdf, which is not specified as a desi
     Info (12023): Found entity 1: HC-SR04
 Info (12128): Elaborating entity "HC-SR04" for hierarchy "HC-SR04:inst1"
 Warning (12125): Using design file trigger.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: trigger-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/trigger.vhd Line: 9
-    Info (12023): Found entity 1: trigger File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/trigger.vhd Line: 4
+    Info (12022): Found design unit 1: trigger-behave File: C:/LIHI/git/Digital musical instrument/trigger.vhd Line: 9
+    Info (12023): Found entity 1: trigger File: C:/LIHI/git/Digital musical instrument/trigger.vhd Line: 4
 Info (12128): Elaborating entity "trigger" for hierarchy "HC-SR04:inst1|trigger:inst2"
 Info (12128): Elaborating entity "dis_meter_sm" for hierarchy "HC-SR04:inst1|dis_meter_sm:inst1"
 Info (12128): Elaborating entity "clk_div_58msec" for hierarchy "HC-SR04:inst1|clk_div_58msec:inst"
@@ -445,17 +444,17 @@ Warning (12125): Using design file keyboard.bdf, which is not specified as a des
     Info (12023): Found entity 1: keyboard
 Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst17"
 Warning (12125): Using design file sound_div.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SOUND_DIV-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/sound_div.vhd Line: 10
-    Info (12023): Found entity 1: SOUND_DIV File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/sound_div.vhd Line: 4
+    Info (12022): Found design unit 1: SOUND_DIV-behave File: C:/LIHI/git/Digital musical instrument/sound_div.vhd Line: 10
+    Info (12023): Found entity 1: SOUND_DIV File: C:/LIHI/git/Digital musical instrument/sound_div.vhd Line: 4
 Info (12128): Elaborating entity "SOUND_DIV" for hierarchy "keyboard:inst17|SOUND_DIV:inst2"
 Warning (12125): Using design file p_encoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: P_ENCODER-behave File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/p_encoder.vhd Line: 9
-    Info (12023): Found entity 1: P_ENCODER File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/p_encoder.vhd Line: 4
+    Info (12022): Found design unit 1: P_ENCODER-behave File: C:/LIHI/git/Digital musical instrument/p_encoder.vhd Line: 9
+    Info (12023): Found entity 1: P_ENCODER File: C:/LIHI/git/Digital musical instrument/p_encoder.vhd Line: 4
 Info (12128): Elaborating entity "P_ENCODER" for hierarchy "keyboard:inst17|P_ENCODER:inst"
 Info (12128): Elaborating entity "padding" for hierarchy "keyboard:inst17|padding:inst1"
 Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:inst4"
 Info (12128): Elaborating entity "half8" for hierarchy "half8:inst3"
-Info (13000): Registers with preset signals will power-up high File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/tx.vhd Line: 7
+Info (13000): Registers with preset signals will power-up high File: C:/LIHI/git/Digital musical instrument/tx.vhd Line: 7
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "highC[6]" is stuck at GND
@@ -467,7 +466,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "highC[0]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register TX:inst6|tx_ser_out will power up to High File: C:/LIHI/ALTERA/git-ALTERA/Digital musical instrument/tx.vhd Line: 7
+    Critical Warning (18010): Register TX:inst6|tx_ser_out will power up to High File: C:/LIHI/git/Digital musical instrument/tx.vhd Line: 7
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -485,9 +484,9 @@ Info (21057): Implemented 395 device resources after synthesis - the final resou
     Info (21059): Implemented 53 output pins
     Info (21061): Implemented 322 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Sat Dec 02 21:33:29 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Sun Dec 03 17:13:55 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:07
 
 

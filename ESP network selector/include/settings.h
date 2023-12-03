@@ -4,8 +4,8 @@
 #define fb_email "digmusical.iot@gmail.com"
 #define fb_pass "musi1827"
 //WiFi Credentials
-#define wifiSSID "Talid-Net"
-#define wifiPassword "31957053taL"
+#define wifiSSID "Galaxy Note2008a7"
+#define wifiPassword "baz12345"
 //Access Point Credentials
 #define apSSID  "ESP32 AP"
 #define apPassword "password"

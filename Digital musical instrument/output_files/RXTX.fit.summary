@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sat Dec 02 21:33:49 2023
+Fitter Status : Successful - Sun Dec 03 17:14:05 2023
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : RXTX
 Top-level Entity Name : rxtx
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 325 / 49,760 ( < 1 % )
+Total logic elements : 319 / 49,760 ( < 1 % )
     Total combinational functions : 307 / 49,760 ( < 1 % )
     Dedicated logic registers : 163 / 49,760 ( < 1 % )
 Total registers : 163

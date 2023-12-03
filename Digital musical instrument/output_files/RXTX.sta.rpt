@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for RXTX
-Sat Dec 02 21:34:01 2023
+Sun Dec 03 17:14:11 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -94,14 +94,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.12        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.1%      ;
-;     Processor 3            ;   3.9%      ;
-;     Processor 4            ;   3.9%      ;
+;     Processor 2            ;   4.6%      ;
+;     Processor 3            ;   4.4%      ;
+;     Processor 4            ;   4.3%      ;
 +----------------------------+-------------+
 
 
@@ -123,9 +123,9 @@ agreement for further details.
 +------------+-----------------+-------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                          ; Note ;
 +------------+-----------------+-------------------------------------+------+
-; 163.53 MHz ; 163.53 MHz      ; clk                                 ;      ;
-; 251.89 MHz ; 251.89 MHz      ; boud:inst|f_out_tmp                 ;      ;
-; 377.22 MHz ; 377.22 MHz      ; HC-SR04:inst1|clk_div_58msec:inst|y ;      ;
+; 155.4 MHz  ; 155.4 MHz       ; clk                                 ;      ;
+; 243.37 MHz ; 243.37 MHz      ; boud:inst|f_out_tmp                 ;      ;
+; 376.08 MHz ; 376.08 MHz      ; HC-SR04:inst1|clk_div_58msec:inst|y ;      ;
 +------------+-----------------+-------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -135,9 +135,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; clk                                 ; -5.115 ; -352.356      ;
-; boud:inst|f_out_tmp                 ; -2.970 ; -69.915       ;
-; HC-SR04:inst1|clk_div_58msec:inst|y ; -1.651 ; -16.058       ;
+; clk                                 ; -5.435 ; -350.426      ;
+; boud:inst|f_out_tmp                 ; -3.109 ; -77.740       ;
+; HC-SR04:inst1|clk_div_58msec:inst|y ; -1.659 ; -16.973       ;
 +-------------------------------------+--------+---------------+
 
 
@@ -146,9 +146,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------+-------+---------------+
 ; Clock                               ; Slack ; End Point TNS ;
 +-------------------------------------+-------+---------------+
-; boud:inst|f_out_tmp                 ; 0.341 ; 0.000         ;
+; HC-SR04:inst1|clk_div_58msec:inst|y ; 0.341 ; 0.000         ;
 ; clk                                 ; 0.341 ; 0.000         ;
-; HC-SR04:inst1|clk_div_58msec:inst|y ; 0.342 ; 0.000         ;
+; boud:inst|f_out_tmp                 ; 0.343 ; 0.000         ;
 +-------------------------------------+-------+---------------+
 
 
@@ -157,9 +157,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clkdiv:inst9|y      ; -3.126 ; -3.126        ;
-; boud:inst|f_out_tmp ; -1.813 ; -41.347       ;
-; RX                  ; -1.599 ; -1.599        ;
+; clkdiv:inst9|y      ; -3.171 ; -3.171        ;
+; boud:inst|f_out_tmp ; -1.825 ; -42.287       ;
+; RX                  ; -1.417 ; -1.417        ;
 +---------------------+--------+---------------+
 
 
@@ -168,9 +168,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; RX                  ; 1.451 ; 0.000         ;
-; boud:inst|f_out_tmp ; 1.550 ; 0.000         ;
-; clkdiv:inst9|y      ; 3.082 ; 0.000         ;
+; RX                  ; 1.234 ; 0.000         ;
+; boud:inst|f_out_tmp ; 1.545 ; 0.000         ;
+; clkdiv:inst9|y      ; 3.037 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -198,9 +198,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                          ; Note ;
 +------------+-----------------+-------------------------------------+------+
-; 175.1 MHz  ; 175.1 MHz       ; clk                                 ;      ;
-; 271.81 MHz ; 271.81 MHz      ; boud:inst|f_out_tmp                 ;      ;
-; 412.71 MHz ; 412.71 MHz      ; HC-SR04:inst1|clk_div_58msec:inst|y ;      ;
+; 166.64 MHz ; 166.64 MHz      ; clk                                 ;      ;
+; 263.16 MHz ; 263.16 MHz      ; boud:inst|f_out_tmp                 ;      ;
+; 411.35 MHz ; 411.35 MHz      ; HC-SR04:inst1|clk_div_58msec:inst|y ;      ;
 +------------+-----------------+-------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -210,9 +210,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; clk                                 ; -4.711 ; -317.162      ;
-; boud:inst|f_out_tmp                 ; -2.679 ; -63.026       ;
-; HC-SR04:inst1|clk_div_58msec:inst|y ; -1.423 ; -13.480       ;
+; clk                                 ; -5.001 ; -315.219      ;
+; boud:inst|f_out_tmp                 ; -2.800 ; -70.293       ;
+; HC-SR04:inst1|clk_div_58msec:inst|y ; -1.431 ; -14.266       ;
 +-------------------------------------+--------+---------------+
 
 
@@ -221,9 +221,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------+-------+---------------+
 ; Clock                               ; Slack ; End Point TNS ;
 +-------------------------------------+-------+---------------+
-; HC-SR04:inst1|clk_div_58msec:inst|y ; 0.306 ; 0.000         ;
+; HC-SR04:inst1|clk_div_58msec:inst|y ; 0.305 ; 0.000         ;
 ; clk                                 ; 0.306 ; 0.000         ;
-; boud:inst|f_out_tmp                 ; 0.307 ; 0.000         ;
+; boud:inst|f_out_tmp                 ; 0.309 ; 0.000         ;
 +-------------------------------------+-------+---------------+
 
 
@@ -232,9 +232,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clkdiv:inst9|y      ; -2.829 ; -2.829        ;
-; boud:inst|f_out_tmp ; -1.587 ; -35.788       ;
-; RX                  ; -1.385 ; -1.385        ;
+; clkdiv:inst9|y      ; -2.878 ; -2.878        ;
+; boud:inst|f_out_tmp ; -1.599 ; -36.691       ;
+; RX                  ; -1.226 ; -1.226        ;
 +---------------------+--------+---------------+
 
 
@@ -243,9 +243,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; RX                  ; 1.327 ; 0.000         ;
-; boud:inst|f_out_tmp ; 1.424 ; 0.000         ;
-; clkdiv:inst9|y      ; 2.877 ; 0.000         ;
+; RX                  ; 1.136 ; 0.000         ;
+; boud:inst|f_out_tmp ; 1.419 ; 0.000         ;
+; clkdiv:inst9|y      ; 2.842 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -273,9 +273,9 @@ No synchronizer chains to report.
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; clk                                 ; -1.742 ; -81.522       ;
-; boud:inst|f_out_tmp                 ; -1.030 ; -22.121       ;
-; HC-SR04:inst1|clk_div_58msec:inst|y ; -0.073 ; -0.085        ;
+; clk                                 ; -1.846 ; -79.967       ;
+; boud:inst|f_out_tmp                 ; -1.101 ; -25.785       ;
+; HC-SR04:inst1|clk_div_58msec:inst|y ; -0.075 ; -0.178        ;
 +-------------------------------------+--------+---------------+
 
 
@@ -284,9 +284,9 @@ No synchronizer chains to report.
 +-------------------------------------+-------+---------------+
 ; Clock                               ; Slack ; End Point TNS ;
 +-------------------------------------+-------+---------------+
-; clk                                 ; 0.147 ; 0.000         ;
 ; HC-SR04:inst1|clk_div_58msec:inst|y ; 0.148 ; 0.000         ;
-; boud:inst|f_out_tmp                 ; 0.148 ; 0.000         ;
+; clk                                 ; 0.148 ; 0.000         ;
+; boud:inst|f_out_tmp                 ; 0.150 ; 0.000         ;
 +-------------------------------------+-------+---------------+
 
 
@@ -295,9 +295,9 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; clkdiv:inst9|y      ; -1.138 ; -1.138        ;
-; RX                  ; -0.269 ; -0.269        ;
-; boud:inst|f_out_tmp ; -0.206 ; -3.425        ;
+; clkdiv:inst9|y      ; -1.150 ; -1.150        ;
+; boud:inst|f_out_tmp ; -0.237 ; -4.069        ;
+; RX                  ; -0.167 ; -0.167        ;
 +---------------------+--------+---------------+
 
 
@@ -306,9 +306,9 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; boud:inst|f_out_tmp ; 0.659 ; 0.000         ;
-; RX                  ; 0.748 ; 0.000         ;
-; clkdiv:inst9|y      ; 1.680 ; 0.000         ;
+; RX                  ; 0.623 ; 0.000         ;
+; boud:inst|f_out_tmp ; 0.657 ; 0.000         ;
+; clkdiv:inst9|y      ; 1.636 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -317,8 +317,8 @@ No synchronizer chains to report.
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; clk                                 ; -3.000 ; -115.133      ;
-; RX                                  ; -3.000 ; -4.148        ;
+; clk                                 ; -3.000 ; -114.941      ;
+; RX                                  ; -3.000 ; -4.163        ;
 ; boud:inst|f_out_tmp                 ; -1.000 ; -35.000       ;
 ; HC-SR04:inst1|clk_div_58msec:inst|y ; -1.000 ; -18.000       ;
 ; clkdiv:inst9|y                      ; -1.000 ; -1.000        ;
@@ -336,18 +336,18 @@ No synchronizer chains to report.
 +--------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                     ; -5.115   ; 0.147 ; -3.126   ; 0.659   ; -3.000              ;
-;  HC-SR04:inst1|clk_div_58msec:inst|y ; -1.651   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
-;  RX                                  ; N/A      ; N/A   ; -1.599   ; 0.748   ; -3.000              ;
-;  boud:inst|f_out_tmp                 ; -2.970   ; 0.148 ; -1.813   ; 0.659   ; -1.403              ;
-;  clk                                 ; -5.115   ; 0.147 ; N/A      ; N/A     ; -3.000              ;
-;  clkdiv:inst9|y                      ; N/A      ; N/A   ; -3.126   ; 1.680   ; -1.403              ;
-; Design-wide TNS                      ; -438.329 ; 0.0   ; -46.072  ; 0.0     ; -234.689            ;
-;  HC-SR04:inst1|clk_div_58msec:inst|y ; -16.058  ; 0.000 ; N/A      ; N/A     ; -25.254             ;
-;  RX                                  ; N/A      ; N/A   ; -1.599   ; 0.000   ; -4.403              ;
-;  boud:inst|f_out_tmp                 ; -69.915  ; 0.000 ; -41.347  ; 0.000   ; -49.105             ;
-;  clk                                 ; -352.356 ; 0.000 ; N/A      ; N/A     ; -154.524            ;
-;  clkdiv:inst9|y                      ; N/A      ; N/A   ; -3.126   ; 0.000   ; -1.403              ;
+; Worst-case Slack                     ; -5.435   ; 0.148 ; -3.171   ; 0.623   ; -3.000              ;
+;  HC-SR04:inst1|clk_div_58msec:inst|y ; -1.659   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  RX                                  ; N/A      ; N/A   ; -1.417   ; 0.623   ; -3.000              ;
+;  boud:inst|f_out_tmp                 ; -3.109   ; 0.150 ; -1.825   ; 0.657   ; -1.403              ;
+;  clk                                 ; -5.435   ; 0.148 ; N/A      ; N/A     ; -3.000              ;
+;  clkdiv:inst9|y                      ; N/A      ; N/A   ; -3.171   ; 1.636   ; -1.403              ;
+; Design-wide TNS                      ; -445.139 ; 0.0   ; -46.875  ; 0.0     ; -234.689            ;
+;  HC-SR04:inst1|clk_div_58msec:inst|y ; -16.973  ; 0.000 ; N/A      ; N/A     ; -25.254             ;
+;  RX                                  ; N/A      ; N/A   ; -1.417   ; 0.000   ; -4.403              ;
+;  boud:inst|f_out_tmp                 ; -77.740  ; 0.000 ; -42.287  ; 0.000   ; -49.105             ;
+;  clk                                 ; -350.426 ; 0.000 ; N/A      ; N/A     ; -154.524            ;
+;  clkdiv:inst9|y                      ; N/A      ; N/A   ; -3.171   ; 0.000   ; -1.403              ;
 +--------------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -883,7 +883,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 02 21:33:57 2023
+    Info: Processing started: Sun Dec 03 17:14:09 2023
 Info: Command: quartus_sta RXTX -c RXTX
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -904,30 +904,30 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.115
+Info (332146): Worst-case setup slack is -5.435
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.115            -352.356 clk 
-    Info (332119):    -2.970             -69.915 boud:inst|f_out_tmp 
-    Info (332119):    -1.651             -16.058 HC-SR04:inst1|clk_div_58msec:inst|y 
+    Info (332119):    -5.435            -350.426 clk 
+    Info (332119):    -3.109             -77.740 boud:inst|f_out_tmp 
+    Info (332119):    -1.659             -16.973 HC-SR04:inst1|clk_div_58msec:inst|y 
 Info (332146): Worst-case hold slack is 0.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.341               0.000 boud:inst|f_out_tmp 
+    Info (332119):     0.341               0.000 HC-SR04:inst1|clk_div_58msec:inst|y 
     Info (332119):     0.341               0.000 clk 
-    Info (332119):     0.342               0.000 HC-SR04:inst1|clk_div_58msec:inst|y 
-Info (332146): Worst-case recovery slack is -3.126
+    Info (332119):     0.343               0.000 boud:inst|f_out_tmp 
+Info (332146): Worst-case recovery slack is -3.171
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.126              -3.126 clkdiv:inst9|y 
-    Info (332119):    -1.813             -41.347 boud:inst|f_out_tmp 
-    Info (332119):    -1.599              -1.599 RX 
-Info (332146): Worst-case removal slack is 1.451
+    Info (332119):    -3.171              -3.171 clkdiv:inst9|y 
+    Info (332119):    -1.825             -42.287 boud:inst|f_out_tmp 
+    Info (332119):    -1.417              -1.417 RX 
+Info (332146): Worst-case removal slack is 1.234
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.451               0.000 RX 
-    Info (332119):     1.550               0.000 boud:inst|f_out_tmp 
-    Info (332119):     3.082               0.000 clkdiv:inst9|y 
+    Info (332119):     1.234               0.000 RX 
+    Info (332119):     1.545               0.000 boud:inst|f_out_tmp 
+    Info (332119):     3.037               0.000 clkdiv:inst9|y 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -941,30 +941,30 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.711
+Info (332146): Worst-case setup slack is -5.001
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.711            -317.162 clk 
-    Info (332119):    -2.679             -63.026 boud:inst|f_out_tmp 
-    Info (332119):    -1.423             -13.480 HC-SR04:inst1|clk_div_58msec:inst|y 
-Info (332146): Worst-case hold slack is 0.306
+    Info (332119):    -5.001            -315.219 clk 
+    Info (332119):    -2.800             -70.293 boud:inst|f_out_tmp 
+    Info (332119):    -1.431             -14.266 HC-SR04:inst1|clk_div_58msec:inst|y 
+Info (332146): Worst-case hold slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.306               0.000 HC-SR04:inst1|clk_div_58msec:inst|y 
+    Info (332119):     0.305               0.000 HC-SR04:inst1|clk_div_58msec:inst|y 
     Info (332119):     0.306               0.000 clk 
-    Info (332119):     0.307               0.000 boud:inst|f_out_tmp 
-Info (332146): Worst-case recovery slack is -2.829
+    Info (332119):     0.309               0.000 boud:inst|f_out_tmp 
+Info (332146): Worst-case recovery slack is -2.878
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.829              -2.829 clkdiv:inst9|y 
-    Info (332119):    -1.587             -35.788 boud:inst|f_out_tmp 
-    Info (332119):    -1.385              -1.385 RX 
-Info (332146): Worst-case removal slack is 1.327
+    Info (332119):    -2.878              -2.878 clkdiv:inst9|y 
+    Info (332119):    -1.599             -36.691 boud:inst|f_out_tmp 
+    Info (332119):    -1.226              -1.226 RX 
+Info (332146): Worst-case removal slack is 1.136
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.327               0.000 RX 
-    Info (332119):     1.424               0.000 boud:inst|f_out_tmp 
-    Info (332119):     2.877               0.000 clkdiv:inst9|y 
+    Info (332119):     1.136               0.000 RX 
+    Info (332119):     1.419               0.000 boud:inst|f_out_tmp 
+    Info (332119):     2.842               0.000 clkdiv:inst9|y 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -976,44 +976,44 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.742
+Info (332146): Worst-case setup slack is -1.846
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.742             -81.522 clk 
-    Info (332119):    -1.030             -22.121 boud:inst|f_out_tmp 
-    Info (332119):    -0.073              -0.085 HC-SR04:inst1|clk_div_58msec:inst|y 
-Info (332146): Worst-case hold slack is 0.147
+    Info (332119):    -1.846             -79.967 clk 
+    Info (332119):    -1.101             -25.785 boud:inst|f_out_tmp 
+    Info (332119):    -0.075              -0.178 HC-SR04:inst1|clk_div_58msec:inst|y 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.147               0.000 clk 
     Info (332119):     0.148               0.000 HC-SR04:inst1|clk_div_58msec:inst|y 
-    Info (332119):     0.148               0.000 boud:inst|f_out_tmp 
-Info (332146): Worst-case recovery slack is -1.138
+    Info (332119):     0.148               0.000 clk 
+    Info (332119):     0.150               0.000 boud:inst|f_out_tmp 
+Info (332146): Worst-case recovery slack is -1.150
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.138              -1.138 clkdiv:inst9|y 
-    Info (332119):    -0.269              -0.269 RX 
-    Info (332119):    -0.206              -3.425 boud:inst|f_out_tmp 
-Info (332146): Worst-case removal slack is 0.659
+    Info (332119):    -1.150              -1.150 clkdiv:inst9|y 
+    Info (332119):    -0.237              -4.069 boud:inst|f_out_tmp 
+    Info (332119):    -0.167              -0.167 RX 
+Info (332146): Worst-case removal slack is 0.623
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.659               0.000 boud:inst|f_out_tmp 
-    Info (332119):     0.748               0.000 RX 
-    Info (332119):     1.680               0.000 clkdiv:inst9|y 
+    Info (332119):     0.623               0.000 RX 
+    Info (332119):     0.657               0.000 boud:inst|f_out_tmp 
+    Info (332119):     1.636               0.000 clkdiv:inst9|y 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -115.133 clk 
-    Info (332119):    -3.000              -4.148 RX 
+    Info (332119):    -3.000            -114.941 clk 
+    Info (332119):    -3.000              -4.163 RX 
     Info (332119):    -1.000             -35.000 boud:inst|f_out_tmp 
     Info (332119):    -1.000             -18.000 HC-SR04:inst1|clk_div_58msec:inst|y 
     Info (332119):    -1.000              -1.000 clkdiv:inst9|y 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Sat Dec 02 21:34:01 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Sun Dec 03 17:14:11 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
