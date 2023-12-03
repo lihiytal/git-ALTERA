@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RXTX
-Sun Dec 03 17:13:55 2023
+Sun Dec 03 18:58:22 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 03 17:13:55 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 03 18:58:22 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RXTX                                        ;
 ; Top-level Entity Name              ; rxtx                                        ;
@@ -55,7 +55,7 @@ agreement for further details.
 ;     Total combinational functions  ; 304                                         ;
 ;     Dedicated logic registers      ; 163                                         ;
 ; Total registers                    ; 163                                         ;
-; Total pins                         ; 73                                          ;
+; Total pins                         ; 65                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -213,14 +213,14 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 163       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 73        ;
+; I/O pins                                    ; 65        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 108       ;
-; Total fan-out                               ; 1526      ;
-; Average fan-out                             ; 2.49      ;
+; Total fan-out                               ; 1518      ;
+; Average fan-out                             ; 2.54      ;
 +---------------------------------------------+-----------+
 
 
@@ -229,7 +229,7 @@ agreement for further details.
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                     ; Entity Name    ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+----------------+--------------+
-; |rxtx                       ; 304 (0)             ; 163 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 73   ; 0            ; 0          ; |rxtx                                   ; rxtx           ; work         ;
+; |rxtx                       ; 304 (0)             ; 163 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |rxtx                                   ; rxtx           ; work         ;
 ;    |HC-SR04:inst1|          ; 81 (0)              ; 63 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst1                     ; HC-SR04        ; work         ;
 ;       |clk_div_58msec:inst| ; 29 (29)             ; 22 (22)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst1|clk_div_58msec:inst ; clk_div_58msec ; work         ;
 ;       |dis_meter_sm:inst1|  ; 18 (18)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst1|dis_meter_sm:inst1  ; dis_meter_sm   ; work         ;
@@ -302,7 +302,7 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 73                          ;
+; boundary_port         ; 65                          ;
 ; cycloneiii_ff         ; 163                         ;
 ;     CLR               ; 11                          ;
 ;     ENA               ; 16                          ;
@@ -330,7 +330,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -340,7 +340,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Dec 03 17:13:45 2023
+    Info: Processing started: Sun Dec 03 18:58:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RXTX -c RXTX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -425,7 +425,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file output_
     Info (12022): Found design unit 1: mux_dis_tav-behave File: C:/LIHI/git/Digital musical instrument/output_files/mux_dis_tav.vhd Line: 10
     Info (12023): Found entity 1: mux_dis_tav File: C:/LIHI/git/Digital musical instrument/output_files/mux_dis_tav.vhd Line: 4
 Info (12127): Elaborating entity "rxtx" for the top level hierarchy
-Warning (275009): Pin "data_in" not connected
 Info (12128): Elaborating entity "TX" for hierarchy "TX:inst6"
 Info (12128): Elaborating entity "boud" for hierarchy "boud:inst"
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:inst9"
@@ -470,22 +469,13 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "data_in[7]"
-    Warning (15610): No output dependent on input pin "data_in[6]"
-    Warning (15610): No output dependent on input pin "data_in[5]"
-    Warning (15610): No output dependent on input pin "data_in[4]"
-    Warning (15610): No output dependent on input pin "data_in[3]"
-    Warning (15610): No output dependent on input pin "data_in[2]"
-    Warning (15610): No output dependent on input pin "data_in[1]"
-    Warning (15610): No output dependent on input pin "data_in[0]"
-Info (21057): Implemented 395 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 20 input pins
+Info (21057): Implemented 387 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 53 output pins
     Info (21061): Implemented 322 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Sun Dec 03 17:13:55 2023
+    Info: Processing ended: Sun Dec 03 18:58:22 2023
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:07
 

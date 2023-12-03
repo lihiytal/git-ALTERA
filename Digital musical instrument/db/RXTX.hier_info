@@ -68,14 +68,6 @@ lowC[3] <= bin2hex:inst13.segment[3]
 lowC[4] <= bin2hex:inst13.segment[4]
 lowC[5] <= bin2hex:inst13.segment[5]
 lowC[6] <= bin2hex:inst13.segment[6]
-data_in[0] => ~NO_FANOUT~
-data_in[1] => ~NO_FANOUT~
-data_in[2] => ~NO_FANOUT~
-data_in[3] => ~NO_FANOUT~
-data_in[4] => ~NO_FANOUT~
-data_in[5] => ~NO_FANOUT~
-data_in[6] => ~NO_FANOUT~
-data_in[7] => ~NO_FANOUT~
 
 
 |rxtx|TX:inst6

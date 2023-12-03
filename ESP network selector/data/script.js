@@ -1,4 +1,5 @@
 const firebaseConfig = {
+  
   apiKey: "AIzaSyBpYMIgDKBwIztlXaGaGfWZr27gDHH00pQ",
   authDomain: "digital-musical-instrument.firebaseapp.com",
   databaseURL: "https://digital-musical-instrument-default-rtdb.europe-west1.firebasedatabase.app",
@@ -6,6 +7,7 @@ const firebaseConfig = {
   storageBucket: "digital-musical-instrument.appspot.com",
   messagingSenderId: "647218548481",
   appId: "1:647218548481:web:938d3b5ef20808e7ca5500"
+
 };
 
 firebase.initializeApp(firebaseConfig);//Initate the connection to firebase using the config

@@ -1,9 +1,9 @@
 {
     "networks": [
+        {"ssid": "WiFi SSID", "password": "WiFi Password"},
         {"ssid": "Kinneret College", "password": ""},
         {"ssid": "KinCollege", "password": ""},
         {"ssid": "AndroidAP", "password": "878500Snoop"},
-        {"ssid": "Talid-Net", "password": "31957053taL"},
-        {"ssid": "Galaxy Note2008a7", "password": "baz12345"}
+        {"ssid": "Talid-Net", "password": "31957053taL"}
     ]
 }

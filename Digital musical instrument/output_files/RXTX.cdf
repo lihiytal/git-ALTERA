@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/LIHI/ALTERA/new HC-SR04/output_files/") File("RXTX.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/LIHI/git/Digital musical instrument/output_files/") File("RXTX.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
