@@ -166,9 +166,7 @@ textarea{
   z-index: 1;
   cursor:default;
 } 
-.key:hover{
-  background-color: rgb(169, 169, 169);
-}
+
 
 .fakeimg {
     background-color: #aaa;

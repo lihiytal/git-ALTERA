@@ -23,19 +23,75 @@ const firebaseConfig = {
 
   var distance = firebase.database().ref('/esp/rx');
   distance.on('value', distanceValue);
+  function key(){
+    document.getElementById("k1").style.backgroundColor="white";
+    document.getElementById("k3").style.backgroundColor="white";
+    document.getElementById("k4").style.backgroundColor="white";
+    document.getElementById("k5").style.backgroundColor="white";
+    document.getElementById("k6").style.backgroundColor="white";
+    document.getElementById("k7").style.backgroundColor="white";
+    document.getElementById("k8").style.backgroundColor="white";
+    document.getElementById("k2").style.backgroundColor="white";
+  }
 
   function distanceValue(dis){
     var s= parseInt(document.getElementById("sVal").value);
     if (s==0){
-        document.querySelector("#name").innerHTML = "tavim";
-        const tavim=["no sound","C","B", "A","G","F","E","D","C"]
-        document.getElementById("distance").innerHTML = '<span class="distance">'+tavim[dis.val()]+'</span>'
+    document.querySelector("#name").innerHTML = "tavim";
+    const tavim=["no sound","C","B", "A","G","F","E","D","C"]
+    document.getElementById("distance").innerHTML = '<span class="distance">'+tavim[dis.val()]+'</span>'
+    // for (let i=1; i<=8; i++){
+    //   if(dis.val()==i){ 
+    //     console.log('"'+'k'+i.toString()+'"')
+    //     document.getElementById('"'+'k'+i.toString()+'"').style.backgroundColor="blue";
+    //     document.getElementById("k1").style.backgroundColor="blue";
+    //   }
+    // }
+      switch(dis.val()){
+        case 0:
+          key()
+          break;
+        case 1:
+            key()
+            document.getElementById("k1").style.backgroundColor=" rgb(169, 169, 169)";
+            break;
+        case 2:
+          key()
+          document.getElementById("k2").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        case 3:
+          key()
+          document.getElementById("k3").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        case 4:
+          key()
+          document.getElementById("k4").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        case 5:
+          key()
+          document.getElementById("k5").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        case 6:
+          key()
+          document.getElementById("k6").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        case 7:
+          key()
+          document.getElementById("k7").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        case 8:
+          key()
+          document.getElementById("k8").style.backgroundColor=" rgb(169, 169, 169)";
+          break;
+        }
     }
     else{
+      
         document.querySelector("#name").innerHTML = "distance";
         document.getElementById("distance").innerHTML = '<span class="distance">'+dis.val()+'</span>'
     }
    }
+   
 
    function select(){
     var s= parseInt(document.getElementById("sVal").value);
