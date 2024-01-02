@@ -4,7 +4,7 @@
 #define fb_email "digmusical.iot@gmail.com"
 #define fb_pass "musi1827"
 //WiFi Credentials
-#define wifiSSID "KinCollege"
+#define wifiSSID "Kinneret College"
 #define wifiPassword ""
 //Access Point Credentials
 #define apSSID  "ESP32 AP"
