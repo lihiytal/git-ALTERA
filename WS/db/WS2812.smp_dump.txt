@@ -1,0 +1,7 @@
+
+State Machine - |WS2812|state
+Name state.reset state.send_bit state.sending state.load 
+state.load 0 0 0 0 
+state.sending 0 0 1 1 
+state.send_bit 0 1 0 1 
+state.reset 1 0 0 1 
