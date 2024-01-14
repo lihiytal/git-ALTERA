@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DAC08
-Sun Jan 14 16:09:28 2024
+Sun Jan 14 19:14:57 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,16 +44,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 14 16:09:28 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 14 19:14:57 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DAC08                                       ;
 ; Top-level Entity Name              ; DAC08                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 27                                          ;
-;     Total combinational functions  ; 27                                          ;
-;     Dedicated logic registers      ; 17                                          ;
-; Total registers                    ; 17                                          ;
-; Total pins                         ; 10                                          ;
+; Total logic elements               ; 25                                          ;
+;     Total combinational functions  ; 25                                          ;
+;     Dedicated logic registers      ; 16                                          ;
+; Total registers                    ; 16                                          ;
+; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -166,15 +166,15 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------+---------+
-; DAC08.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/LIHI/git/DAC08/DAC08.bdf    ;         ;
-; clk_div.vhd                      ; yes             ; User VHDL File                     ; C:/LIHI/git/DAC08/clk_div.vhd  ;         ;
-; dac_wave.vhd                     ; yes             ; Auto-Found VHDL File               ; C:/LIHI/git/DAC08/dac_wave.vhd ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------+---------+
+; DAC08.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/LIHI/git/DAC08/DAC08.bdf     ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File                     ; C:/LIHI/git/DAC08/clk_div.vhd   ;         ;
+; ../DAC_SW/dac_wave.vhd           ; yes             ; User VHDL File                     ; C:/LIHI/git/DAC_SW/dac_wave.vhd ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -182,30 +182,30 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 27             ;
+; Estimated Total logic elements              ; 25             ;
 ;                                             ;                ;
-; Total combinational functions               ; 27             ;
+; Total combinational functions               ; 25             ;
 ; Logic element usage by number of LUT inputs ;                ;
 ;     -- 4 input functions                    ; 6              ;
 ;     -- 3 input functions                    ; 8              ;
-;     -- <=2 input functions                  ; 13             ;
+;     -- <=2 input functions                  ; 11             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 13             ;
-;     -- arithmetic mode                      ; 14             ;
+;     -- normal mode                          ; 12             ;
+;     -- arithmetic mode                      ; 13             ;
 ;                                             ;                ;
-; Total registers                             ; 17             ;
-;     -- Dedicated logic registers            ; 17             ;
+; Total registers                             ; 16             ;
+;     -- Dedicated logic registers            ; 16             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 10             ;
+; I/O pins                                    ; 9              ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clk_div:inst|y ;
 ; Maximum fan-out                             ; 9              ;
-; Total fan-out                               ; 134            ;
-; Average fan-out                             ; 2.09           ;
+; Total fan-out                               ; 125            ;
+; Average fan-out                             ; 2.12           ;
 +---------------------------------------------+----------------+
 
 
@@ -214,8 +214,8 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name   ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
-; |DAC08                     ; 27 (0)              ; 17 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 10   ; 0            ; 0          ; |DAC08                ; DAC08       ; work         ;
-;    |clk_div:inst|          ; 12 (12)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DAC08|clk_div:inst   ; clk_div     ; work         ;
+; |DAC08                     ; 25 (0)              ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |DAC08                ; DAC08       ; work         ;
+;    |clk_div:inst|          ; 10 (10)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DAC08|clk_div:inst   ; clk_div     ; work         ;
 ;    |dac_wave:inst1|        ; 15 (15)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DAC08|dac_wave:inst1 ; dac_wave    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -237,8 +237,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 17    ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 16    ;
+; Number of registers using Synchronous Clear  ; 7     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -252,22 +252,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 17                          ;
-;     SCLR              ; 8                           ;
+; boundary_port         ; 9                           ;
+; cycloneiii_ff         ; 16                          ;
+;     SCLR              ; 7                           ;
 ;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 27                          ;
-;     arith             ; 14                          ;
-;         2 data inputs ; 8                           ;
+; cycloneiii_lcell_comb ; 25                          ;
+;     arith             ; 13                          ;
+;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 6                           ;
-;     normal            ; 13                          ;
+;     normal            ; 12                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.95                        ;
+; Average LUT depth     ; 1.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -286,7 +286,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jan 14 16:09:16 2024
+    Info: Processing started: Sun Jan 14 19:14:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DAC08 -c DAC08
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -297,24 +297,24 @@ Warning (12019): Can't analyze file -- file output_files/dac_wave.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
     Info (12022): Found design unit 1: clk_div-behave File: C:/LIHI/git/DAC08/clk_div.vhd Line: 7
     Info (12023): Found entity 1: clk_div File: C:/LIHI/git/DAC08/clk_div.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file /lihi/git/dac_sw/dac_wave.vhd
+    Info (12022): Found design unit 1: dac_wave-behave File: C:/LIHI/git/DAC_SW/dac_wave.vhd Line: 8
+    Info (12023): Found entity 1: dac_wave File: C:/LIHI/git/DAC_SW/dac_wave.vhd Line: 4
 Info (12127): Elaborating entity "DAC08" for the top level hierarchy
-Warning (12125): Using design file dac_wave.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: dac_wave-behave File: C:/LIHI/git/DAC08/dac_wave.vhd Line: 9
-    Info (12023): Found entity 1: dac_wave File: C:/LIHI/git/DAC08/dac_wave.vhd Line: 4
 Info (12128): Elaborating entity "dac_wave" for hierarchy "dac_wave:inst1"
-Info (10041): Inferred latch for "u_d" at dac_wave.vhd(22) File: C:/LIHI/git/DAC08/dac_wave.vhd Line: 22
+Info (10041): Inferred latch for "u_d" at dac_wave.vhd(21) File: C:/LIHI/git/DAC_SW/dac_wave.vhd Line: 21
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 27 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Sun Jan 14 16:09:28 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:08
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Sun Jan 14 19:14:57 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 

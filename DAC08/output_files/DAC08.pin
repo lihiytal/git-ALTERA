@@ -101,12 +101,12 @@ RESERVED_INPUT               : AA6       :        :                   :         
 RESERVED_INPUT               : AA7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AA8       :        :                   :         : 3         :                
 RESERVED_INPUT               : AA9       :        :                   :         : 3         :                
-dacin[2]                     : AA10      : output : 2.5 V             :         : 3         : Y              
+dacin[5]                     : AA10      : output : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT               : AA11      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA12      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA13      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA14      :        :                   :         : 4         :                
-dacin[7]                     : AA15      : output : 2.5 V             :         : 4         : Y              
+dacin[0]                     : AA15      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AA16      :        :                   :         : 4         :                
 RESERVED_INPUT               : AA17      :        :                   :         : 4         :                
 GND                          : AA18      : gnd    :                   :         :           :                
@@ -115,7 +115,7 @@ RESERVED_INPUT               : AA20      :        :                   :         
 RESERVED_INPUT               : AA21      :        :                   :         : 5         :                
 RESERVED_INPUT               : AA22      :        :                   :         : 5         :                
 GND                          : AB1       : gnd    :                   :         :           :                
-piz                          : AB2       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : AB2       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB3       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB4       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB5       :        :                   :         : 3         :                
@@ -126,7 +126,7 @@ RESERVED_INPUT               : AB9       :        :                   :         
 RESERVED_INPUT               : AB10      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB11      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB12      :        :                   :         : 4         :                
-dacin[5]                     : AB13      : output : 2.5 V             :         : 4         : Y              
+dacin[2]                     : AB13      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AB14      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB15      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB16      :        :                   :         : 4         :                
@@ -520,9 +520,9 @@ RESERVED_INPUT               : W7        :        :                   :         
 RESERVED_INPUT               : W8        :        :                   :         : 3         :                
 RESERVED_INPUT               : W9        :        :                   :         : 3         :                
 RESERVED_INPUT               : W10       :        :                   :         : 3         :                
-dacin[3]                     : W11       : output : 2.5 V             :         : 4         : Y              
+dacin[4]                     : W11       : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : W12       :        :                   :         : 4         :                
-dacin[6]                     : W13       : output : 2.5 V             :         : 4         : Y              
+dacin[1]                     : W13       : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : W14       :        :                   :         : 4         :                
 RESERVED_INPUT               : W15       :        :                   :         : 4         :                
 RESERVED_INPUT               : W16       :        :                   :         : 4         :                
@@ -538,11 +538,11 @@ RESERVED_INPUT               : Y3        :        :                   :         
 RESERVED_INPUT               : Y4        :        :                   :         : 3         :                
 RESERVED_INPUT               : Y5        :        :                   :         : 3         :                
 RESERVED_INPUT               : Y6        :        :                   :         : 3         :                
-dacin[0]                     : Y7        : output : 2.5 V             :         : 3         : Y              
-dacin[1]                     : Y8        : output : 2.5 V             :         : 3         : Y              
+dacin[7]                     : Y7        : output : 2.5 V             :         : 3         : Y              
+dacin[6]                     : Y8        : output : 2.5 V             :         : 3         : Y              
 GND                          : Y9        : gnd    :                   :         :           :                
 RESERVED_INPUT               : Y10       :        :                   :         : 3         :                
-dacin[4]                     : Y11       : output : 2.5 V             :         : 4         : Y              
+dacin[3]                     : Y11       : output : 2.5 V             :         : 4         : Y              
 GND                          : Y12       : gnd    :                   :         :           :                
 RESERVED_INPUT               : Y13       :        :                   :         : 4         :                
 RESERVED_INPUT               : Y14       :        :                   :         : 4         :                

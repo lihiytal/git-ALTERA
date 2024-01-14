@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DAC_SW
-Sun Jan 14 16:15:47 2024
+Sun Jan 14 19:31:03 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 14 16:15:46 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 14 19:31:03 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DAC_SW                                      ;
 ; Top-level Entity Name              ; DAC_SW                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 16                                          ;
+; Total logic elements               ; 11                                          ;
+;     Total combinational functions  ; 11                                          ;
+;     Dedicated logic registers      ; 8                                           ;
+; Total registers                    ; 8                                           ;
+; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -157,51 +157,55 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------+---------+
-; DAC_SW.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/LIHI/git/DAC_SW/DAC_SW.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------+---------+
+; DAC_SW.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/LIHI/git/DAC_SW/DAC_SW.bdf          ;         ;
+; output_files/cd.vhd              ; yes             ; User VHDL File                     ; C:/LIHI/git/DAC_SW/output_files/cd.vhd ;         ;
+; dac_wave.vhd                     ; yes             ; Auto-Found VHDL File               ; C:/LIHI/git/DAC_SW/dac_wave.vhd        ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-;                                             ;               ;
-; Total combinational functions               ; 0             ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 0             ;
-;     -- 3 input functions                    ; 0             ;
-;     -- <=2 input functions                  ; 0             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 0             ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 0             ;
-;     -- Dedicated logic registers            ; 0             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 16            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; dac[7]~output ;
-; Maximum fan-out                             ; 1             ;
-; Total fan-out                               ; 24            ;
-; Average fan-out                             ; 0.75          ;
-+---------------------------------------------+---------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 11                  ;
+;                                             ;                     ;
+; Total combinational functions               ; 11                  ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 2                   ;
+;     -- 3 input functions                    ; 0                   ;
+;     -- <=2 input functions                  ; 9                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 4                   ;
+;     -- arithmetic mode                      ; 7                   ;
+;                                             ;                     ;
+; Total registers                             ; 8                   ;
+;     -- Dedicated logic registers            ; 8                   ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 17                  ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; cd:inst|LessThan0~2 ;
+; Maximum fan-out                             ; 8                   ;
+; Total fan-out                               ; 74                  ;
+; Average fan-out                             ; 1.40                ;
++---------------------------------------------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,7 +213,8 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |DAC_SW                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |DAC_SW             ; DAC_SW      ; work         ;
+; |DAC_SW                    ; 11 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |DAC_SW             ; DAC_SW      ; work         ;
+;    |cd:inst|               ; 11 (11)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DAC_SW|cd:inst     ; cd          ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,8 +224,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 8     ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -231,14 +236,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 16                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 8                           ;
+;     SCLR              ; 8                           ;
+; cycloneiii_lcell_comb ; 11                          ;
+;     arith             ; 7                           ;
+;         2 data inputs ; 7                           ;
+;     normal            ; 4                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         4 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.66                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -256,22 +270,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jan 14 16:15:36 2024
+    Info: Processing started: Sun Jan 14 19:30:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DAC_SW -c DAC_SW
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file dac_sw.bdf
     Info (12023): Found entity 1: DAC_SW
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/cd.vhd
+    Info (12022): Found design unit 1: cd-b File: C:/LIHI/git/DAC_SW/output_files/cd.vhd Line: 8
+    Info (12023): Found entity 1: cd File: C:/LIHI/git/DAC_SW/output_files/cd.vhd Line: 3
 Info (12127): Elaborating entity "DAC_SW" for the top level hierarchy
+Warning (275009): Pin "sw" not connected
+Info (12128): Elaborating entity "cd" for hierarchy "cd:inst"
+Warning (12125): Using design file dac_wave.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: dac_wave-behave File: C:/LIHI/git/DAC_SW/dac_wave.vhd Line: 8
+    Info (12023): Found entity 1: dac_wave File: C:/LIHI/git/DAC_SW/dac_wave.vhd Line: 4
+Info (12128): Elaborating entity "dac_wave" for hierarchy "dac_wave:inst2"
+Info (10041): Inferred latch for "u_d" at dac_wave.vhd(21) File: C:/LIHI/git/DAC_SW/dac_wave.vhd Line: 21
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw[7]"
+    Warning (15610): No output dependent on input pin "sw[6]"
+    Warning (15610): No output dependent on input pin "sw[5]"
+    Warning (15610): No output dependent on input pin "sw[4]"
+    Warning (15610): No output dependent on input pin "sw[3]"
+    Warning (15610): No output dependent on input pin "sw[2]"
+    Warning (15610): No output dependent on input pin "sw[1]"
+    Warning (15610): No output dependent on input pin "sw[0]"
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 8 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4733 megabytes
-    Info: Processing ended: Sun Jan 14 16:15:47 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:06
+    Info (21061): Implemented 11 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Sun Jan 14 19:31:03 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 

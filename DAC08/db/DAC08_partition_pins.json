@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "piz",
-					"strict" : false
-				},
-				{
 					"name" : "dacin[7]",
 					"strict" : false
 				},

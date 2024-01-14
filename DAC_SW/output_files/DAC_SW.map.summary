@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Jan 14 16:15:46 2024
+Analysis & Synthesis Status : Successful - Sun Jan 14 19:31:03 2024
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DAC_SW
 Top-level Entity Name : DAC_SW
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 16
+Total logic elements : 11
+    Total combinational functions : 11
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 17
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

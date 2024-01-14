@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sun Jan 14 16:09:36 2024
+Fitter Status : Successful - Sun Jan 14 19:15:05 2024
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DAC08
 Top-level Entity Name : DAC08
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 29 / 49,760 ( < 1 % )
-    Total combinational functions : 28 / 49,760 ( < 1 % )
-    Dedicated logic registers : 17 / 49,760 ( < 1 % )
-Total registers : 17
-Total pins : 10 / 360 ( 3 % )
+Total logic elements : 27 / 49,760 ( < 1 % )
+    Total combinational functions : 26 / 49,760 ( < 1 % )
+    Dedicated logic registers : 16 / 49,760 ( < 1 % )
+Total registers : 16
+Total pins : 9 / 360 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

@@ -1,6 +1,4 @@
 |DAC08
-piz <= dac_wave:inst1.a
-clk => clk_div:inst.clk
 dacin[0] <= dac_wave:inst1.dout[0]
 dacin[1] <= dac_wave:inst1.dout[1]
 dacin[2] <= dac_wave:inst1.dout[2]
@@ -9,6 +7,7 @@ dacin[4] <= dac_wave:inst1.dout[4]
 dacin[5] <= dac_wave:inst1.dout[5]
 dacin[6] <= dac_wave:inst1.dout[6]
 dacin[7] <= dac_wave:inst1.dout[7]
+clk => clk_div:inst.clk
 
 
 |DAC08|dac_wave:inst1
@@ -20,7 +19,6 @@ clk => cnt[4].CLK
 clk => cnt[5].CLK
 clk => cnt[6].CLK
 clk => cnt[7].CLK
-a <= u_d.DB_MAX_OUTPUT_PORT_TYPE
 dout[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
 dout[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
 dout[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -40,7 +38,6 @@ clk => cnt[3].CLK
 clk => cnt[4].CLK
 clk => cnt[5].CLK
 clk => cnt[6].CLK
-clk => cnt[7].CLK
 y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
