@@ -1,5 +1,5 @@
 Flow report for RXTX
-Tue Jan 02 12:28:06 2024
+Mon Jan 08 15:49:13 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 02 12:28:06 2024       ;
+; Flow Status                        ; Successful - Mon Jan 08 15:49:13 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RXTX                                        ;
 ; Top-level Entity Name              ; rxtx                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 322 / 49,760 ( < 1 % )                      ;
+; Total logic elements               ; 321 / 49,760 ( < 1 % )                      ;
 ;     Total combinational functions  ; 307 / 49,760 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 163 / 49,760 ( < 1 % )                      ;
 ; Total registers                    ; 163                                         ;
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/02/2024 12:27:24 ;
+; Start date & time ; 01/08/2024 15:48:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RXTX                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +-------------------------------------+-----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                   ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+-----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 105658697452582.170419124421936         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 105658697452582.170472168933080         ; --            ; --          ; --             ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:\LIHI\ALTERA\new HC-SR04\output_files ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                             ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)               ; <None>        ; --          ; --             ;
@@ -104,12 +104,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 4792 MB             ; 00:00:09                           ;
-; Fitter                    ; 00:00:15     ; 1.1                     ; 5641 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4682 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4822 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4653 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 4804 MB             ; 00:00:11                           ;
+; Fitter                    ; 00:00:27     ; 1.1                     ; 5645 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 4679 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 4821 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4653 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:58     ; --                      ; --                  ; 00:00:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

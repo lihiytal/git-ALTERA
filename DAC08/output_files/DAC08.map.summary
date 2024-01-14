@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Jan 14 16:09:28 2024
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : DAC08
+Top-level Entity Name : DAC08
+Family : MAX 10
+Total logic elements : 27
+    Total combinational functions : 27
+    Dedicated logic registers : 17
+Total registers : 17
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

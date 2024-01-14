@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "piz",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dacin[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
