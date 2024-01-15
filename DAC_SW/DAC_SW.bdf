@@ -40,7 +40,7 @@ agreement for further details.
 	(input)
 	(rect 184 160 352 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 17)(font "Intel Clear" ))
+	(text "clk" (rect 5 0 19 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -54,7 +54,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 528 112 704 128)
+	(rect 816 80 992 96)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "dac[7..0]" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -105,14 +105,14 @@ agreement for further details.
 		(pt 144 32)
 		(output)
 		(text "cnt[7..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "cnt[7..0]" (rect 89 27 123 39)(font "Arial" ))
+		(text "cnt[7..0]" (rect 89 27 130 39)(font "Arial" ))
 		(line (pt 144 32)(pt 128 32)(line_width 3))
 	)
 	(port
 		(pt 144 48)
 		(output)
 		(text "y" (rect 0 0 7 12)(font "Arial" ))
-		(text "y" (rect 118 43 123 55)(font "Arial" ))
+		(text "y" (rect 118 43 125 55)(font "Arial" ))
 		(line (pt 144 48)(pt 128 48))
 	)
 	(drawing
@@ -138,18 +138,18 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 504 168)
-	(pt 504 120)
-	(bus)
-)
-(connector
 	(pt 496 168)
 	(pt 504 168)
 	(bus)
 )
 (connector
-	(pt 504 120)
-	(pt 528 120)
+	(pt 504 168)
+	(pt 504 88)
+	(bus)
+)
+(connector
+	(pt 504 88)
+	(pt 816 88)
 	(bus)
 )
 (junction (pt 664 184))

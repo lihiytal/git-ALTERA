@@ -15,7 +15,7 @@ bool useSetup = false;
     //False : Connects to the the coded wifi credentials
 //////////////////////
 //HTML Settings
-String files[] = {"/setup.html", "/index.html", "/script.js", "/styles.css","/networks.json"};
+String files[] = {"/Si.css","/stylenew.css","/login.css","/play.js","/scriptLog.js","/login.html","/sign.html","/indexnew.html","/components.html","/ContactUs.html","/play.html","/setup.html", "/index.html", "/script.js", "/styles.css","/networks.json"};
     //Add to the array the paths for your files with the root being /data
     // examples : /index.html,/files/site2.html,/files/script2.js 
 
