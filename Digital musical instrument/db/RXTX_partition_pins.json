@@ -44,34 +44,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "highB[6]",
-					"strict" : false
-				},
-				{
-					"name" : "highB[5]",
-					"strict" : false
-				},
-				{
-					"name" : "highB[4]",
-					"strict" : false
-				},
-				{
-					"name" : "highB[3]",
-					"strict" : false
-				},
-				{
-					"name" : "highB[2]",
-					"strict" : false
-				},
-				{
-					"name" : "highB[1]",
-					"strict" : false
-				},
-				{
-					"name" : "highB[0]",
-					"strict" : false
-				},
-				{
 					"name" : "leds[7]",
 					"strict" : false
 				},
@@ -200,6 +172,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "keyboard[3]",
+					"strict" : false
+				},
+				{
 					"name" : "keyboard[1]",
 					"strict" : false
 				},
@@ -209,10 +185,6 @@
 				},
 				{
 					"name" : "keyboard[2]",
-					"strict" : false
-				},
-				{
-					"name" : "keyboard[3]",
 					"strict" : false
 				},
 				{

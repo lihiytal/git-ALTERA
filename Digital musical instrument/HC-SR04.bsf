@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 200 48)
 		(output)
-		(text "distanse[7..0]" (rect 0 0 80 19)(font "Intel Clear" (font_size 8)))
-		(text "distanse[7..0]" (rect 99 43 179 62)(font "Intel Clear" (font_size 8)))
+		(text "distanse[3..0]" (rect 0 0 80 19)(font "Intel Clear" (font_size 8)))
+		(text "distanse[3..0]" (rect 99 43 179 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 200 48)(pt 184 48)(line_width 3))
 	)
 	(drawing

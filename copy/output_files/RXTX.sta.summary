@@ -1,0 +1,209 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.214
+TNS   : -349.363
+
+Type  : Slow 1200mV 85C Model Setup 'boud:inst|f_out_tmp'
+Slack : -3.363
+TNS   : -77.870
+
+Type  : Slow 1200mV 85C Model Setup 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : -1.662
+TNS   : -16.833
+
+Type  : Slow 1200mV 85C Model Hold 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'boud:inst|f_out_tmp'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clkdiv:inst9|y'
+Slack : -2.849
+TNS   : -2.849
+
+Type  : Slow 1200mV 85C Model Recovery 'boud:inst|f_out_tmp'
+Slack : -1.830
+TNS   : -42.182
+
+Type  : Slow 1200mV 85C Model Recovery 'RX'
+Slack : -1.201
+TNS   : -1.201
+
+Type  : Slow 1200mV 85C Model Removal 'RX'
+Slack : 1.119
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'boud:inst|f_out_tmp'
+Slack : 1.623
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clkdiv:inst9|y'
+Slack : 2.754
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -154.524
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RX'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'boud:inst|f_out_tmp'
+Slack : -1.403
+TNS   : -49.105
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : -1.403
+TNS   : -25.254
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkdiv:inst9|y'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.810
+TNS   : -313.583
+
+Type  : Slow 1200mV 0C Model Setup 'boud:inst|f_out_tmp'
+Slack : -3.115
+TNS   : -70.622
+
+Type  : Slow 1200mV 0C Model Setup 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : -1.431
+TNS   : -13.951
+
+Type  : Slow 1200mV 0C Model Hold 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'boud:inst|f_out_tmp'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clkdiv:inst9|y'
+Slack : -2.567
+TNS   : -2.567
+
+Type  : Slow 1200mV 0C Model Recovery 'boud:inst|f_out_tmp'
+Slack : -1.591
+TNS   : -36.581
+
+Type  : Slow 1200mV 0C Model Recovery 'RX'
+Slack : -1.006
+TNS   : -1.006
+
+Type  : Slow 1200mV 0C Model Removal 'RX'
+Slack : 1.003
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'boud:inst|f_out_tmp'
+Slack : 1.478
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clkdiv:inst9|y'
+Slack : 2.568
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -154.524
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RX'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'boud:inst|f_out_tmp'
+Slack : -1.403
+TNS   : -49.105
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : -1.403
+TNS   : -25.254
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkdiv:inst9|y'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.698
+TNS   : -82.263
+
+Type  : Fast 1200mV 0C Model Setup 'boud:inst|f_out_tmp'
+Slack : -1.350
+TNS   : -25.499
+
+Type  : Fast 1200mV 0C Model Setup 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : -0.076
+TNS   : -0.137
+
+Type  : Fast 1200mV 0C Model Hold 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'boud:inst|f_out_tmp'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clkdiv:inst9|y'
+Slack : -1.014
+TNS   : -1.014
+
+Type  : Fast 1200mV 0C Model Recovery 'boud:inst|f_out_tmp'
+Slack : -0.222
+TNS   : -3.870
+
+Type  : Fast 1200mV 0C Model Recovery 'RX'
+Slack : -0.086
+TNS   : -0.086
+
+Type  : Fast 1200mV 0C Model Removal 'RX'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'boud:inst|f_out_tmp'
+Slack : 0.695
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clkdiv:inst9|y'
+Slack : 1.536
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -114.596
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RX'
+Slack : -3.000
+TNS   : -4.172
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'boud:inst|f_out_tmp'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HC-SR04:inst1|clk_div_58msec:inst|y'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkdiv:inst9|y'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------
