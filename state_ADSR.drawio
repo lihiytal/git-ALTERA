@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" modified="2024-01-29T08:29:09.971Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="7Gbv5xv1rq4TLgYr0Wco" version="23.0.2" type="device">
+  <diagram name="Page-1" id="58cdce13-f638-feb5-8d6f-7d28b1aa9fa0">
+    <mxGraphModel dx="1080" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-42" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JP41w6np1a_DYkDY1Qyu-38" target="JP41w6np1a_DYkDY1Qyu-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="280" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-28" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-34" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-35" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-36" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-37" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-38" value="RELEASE" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-47" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JP41w6np1a_DYkDY1Qyu-39" target="JP41w6np1a_DYkDY1Qyu-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-39" value="SUSTAIN" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-44" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JP41w6np1a_DYkDY1Qyu-40" target="JP41w6np1a_DYkDY1Qyu-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-40" value="DECAY" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-48" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JP41w6np1a_DYkDY1Qyu-41" target="JP41w6np1a_DYkDY1Qyu-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-41" value="ATTACK" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-50" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="JP41w6np1a_DYkDY1Qyu-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="280" as="sourcePoint" />
+            <mxPoint x="410" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-51" value="קליד נלחץ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="565" y="248" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-52" value="העוצמת קול מגיעה &lt;br&gt;למקסימום מהחיישן מרחק" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="370" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-54" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="450" as="sourcePoint" />
+            <mxPoint x="300" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-55" value="הקליד משוחרר" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="450" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-56" value="הורדת עוצמת הקול &lt;br&gt;לעוצמת קול קבועה" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="555" y="520" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-57" value="התייצבות על &lt;br&gt;העוצמת קול" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="210" y="523" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JP41w6np1a_DYkDY1Qyu-58" value="&lt;div style=&quot;direction: rtl;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;מידע שנכנס לקוד:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;תדר של הקליד&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;1 - קליד לחוץ&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;0 - קליד משוחרר&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;עוצמת קול&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;מידע שיוצא מהקוד:&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;תדר מאופנן&lt;/div&gt;&lt;div style=&quot;direction: rtl;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="193" width="110" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
