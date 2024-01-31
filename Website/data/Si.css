@@ -4,9 +4,12 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 4px;
-    float: inline-end;
-    margin: 10px;
-}
+    align-items: center;
+    position: fixed;
+    top: 4px;
+    right: 2px;
+    z-index: 2;
+}   
 #l{
     color: #295753;
     float: inline-start;
