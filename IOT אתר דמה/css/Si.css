@@ -1,37 +1,149 @@
+#kav div {
+  padding: 30px 10px;
+  margin: 16px 2px;
+  border: 1px solid #3f888163;
+  border-radius: 4px;
+  background-color: #295753;
+  color: #fff;
+  float: inline-start;
+  align-items: center;
+}
+
+/* .sw {
+  display: flex;
+  flex-direction: row;
+} */
+
+#zo {
+  border-radius: 30px;
+  color: #295753;
+  background-color: whitesmoke;
+  padding: 5px;
+  margin: 5px 2px;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked+#zo {
+  background-color: #184844;
+  color: #fff;
+}
+
+input[type="radio"]:checked+#zo.blue {
+  background-color: blue;
+  color: #fff;
+}
+
+input[type="radio"]:checked+#zo.yellow {
+  background-color: yellow;
+  color: #000000;
+}
+
+input[type="radio"]:checked+#zo.green {
+  background-color: green;
+  color: #fff;
+}
+
+input[type="radio"]:checked+#zo.red {
+  background-color: red;
+  color: #fff;
+}
+
+input[type="radio"]:checked+#zo.orange {
+  background-color: orange;
+  color: #fff;
+}
+
+input[type="radio"]:checked+#zo.pink {
+  background-color: pink;
+  color: #fff;
+}
+
+input[type="radio"]:checked+#zo.white {
+  background-color: white;
+  color: #000000;
+}
+
+input[type="radio"]:checked+#zo.off {
+  background-color: #b7b3bd;
+  color: #000000;
+}
+
+
+
+.material-symbols-outlined {
+  float: left;
+  margin: 16px 2px;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 24
+}
+
+#tavim {
+  float: left;
+  font-size: 60px;
+  padding: 16px 10px;
+  margin: auto;
+}
 
 .container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 4px;
-    float: inline-end;
-    margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  float: right;
+  position:fixed;
+  margin: 10px;
 }
-#l{
-    color: #295753;
-    float: inline-start;
-    font-size: 10px;
-    margin: 10px;
+
+#l {
+  color: #295753;
+  float: inline-start;
+  font-size: 10px;
+  margin: 10px;
 }
-#ll{
-    padding: 7px;
-    float: inline-start;
-    font-size: 10px;
-    margin: 1px;
+
+#ll {
+  padding: 7px;
+  float: inline-start;
+  font-size: 10px;
+  margin: 1px;
 }
 
 
 button {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #3f888163;
-    border-radius: 4px;
-    background-color: #295753;
-    color: #fff;
-    cursor: pointer;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #3f888163;
+  border-radius: 4px;
+  background-color: #295753;
+  color: #fff;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #4c817d;
-    transition: 1s;
+  background-color: #4c817d;
+  transition: 1s;
+}
+
+#zo {
+  border-radius: 30px;
+  color: #295753;
+  background-color: whitesmoke;
+  padding: 5px;
+  margin: 5px 2px;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 }

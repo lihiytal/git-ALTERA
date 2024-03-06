@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melody Settings</title>
-    <link rel="stylesheet" href="css/Si.css">
     <link rel="stylesheet" href="css/stylenew.css">
+    <link rel="stylesheet" href="css/Si.css">
     <link rel="icon" href="">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200" />
 </head>
 
 <body>
+    <div class="container">
+        <h2 id="l">Login or Sign</h2>
+        <button id="ll" onclick="window.location.href='login.html'">Login</button>
+        <button id="ll" onclick="window.location.href='sign.html'">Sign</button>
+    </div>
     <header>
         <h1 id="up">Digital musical instrument</h1>
         <nav class="high">
@@ -19,12 +26,7 @@
             <a href="components.html">Components</a>
             <a href="ContactUs.html">Contact Us</a>
             <img class="logo" src="" alt="">
-            <p>Melody Settings</p>
-            <div class="container">
-                <h2 id="l">Login or Sign</h2>
-                <button id="ll" onclick="window.location.href='login.html'">Login</button>
-                <button id="ll" onclick="window.location.href='sign.html'">Sign</button>
-            </div>
+
         </nav>
     </header>
 
@@ -33,34 +35,87 @@
         <form>
             <div class="row">
                 <div dir="ltr" class="side g">
-                <label><h4>What colors would you like in the LED ring?</h4></label>
-                    <div id="mar">
-                        <label><input type="checkbox">Blue</label>
-                        <label><input type="checkbox">Red</label>
-                        <label><input type="checkbox">Green</label>
-                        <label><input type="checkbox">Yellow</label>
+                    <label>
+                        <h4>What colors would you like in the LED ring?</h4>
+                    </label>
+                    <div class="sw">
+                        <input type="radio"  id="switch1" name="switch-color">
+                        <label id="zo" onclick="changeColor(this, 'blue')" for="switch1">Blue</label>
+
+                        <input type="radio" id="switch2" name="switch-color">
+                        <label id="zo"  onclick="changeColor(this, 'yellow')" for="switch2">yellow</label>
+
+                        <input type="radio" id="switch3" name="switch-color">
+                        <label id="zo"  onclick="changeColor(this, 'red')" for="switch3">red</label>
+
+                        <input type="radio" id="switch4" name="switch-color">
+                        <label id="zo"  onclick="changeColor(this, 'green')" for="switch4">green</label>
+
+                        <input type="radio" id="switch5" name="switch-color">
+                        <label id="zo"  onclick="changeColor(this, 'orange')" for="switch5">orange</label>
+
+                        <input type="radio" id="switch6" name="switch-color">
+                        <label id="zo"  onclick="changeColor(this, 'pink')" for="switch6">pink</label>
+
+                        <input type="radio" id="switch7" name="switch-color">
+                        <label id="zo"  onclick="changeColor(this, 'white')" for="switch7">white</label>
+                                            
+                        <input type="radio" id="switch8" name="switch-color" checked>
+                        <label id="zo"  onclick="changeColor(this, 'off')" for="switch8">off</label>
+
                     </div>
                 </div>
                 <div dir="ltr" class="side g">
-                    <label><h4>What instrument would you like to play?</h4></label>
-                        <div id="mar">
-                            <label><input type="radio" name="contact">Piano</label>
-                            <label><input type="radio" name="contact">Guitar</label>
-                        </div>
+                    <label>
+                        <h4>What instrument would you like to play?</h4>
+                    </label>
+                    <input type="radio" id="switchp" name="switch-r">
+                    <label id="zo" for="switchp">Piano</label>
+
+                    <input type="radio" id="switchg" name="switch-r">
+                    <label id="zo" for="switchg">Guitar</label>
                 </div>
             </div>
         </form>
+
         <div class="row ">
-            <div>
-                <label></label>
-                <select onchange="select()"  id="sVal">
-                    <option value="0">tav</option>
-                    <option value="1">distance</option>
-                </select>
+            <div id="kav">
+                <span class="material-symbols-outlined">volume_up</span>
+                <div id="kav1">
+                </div>
+                <div id="kav2">
+                </div>
+                <div id="kav3">
+                </div>
+                <div id="kav4">
+                </div>
+                <div id="kav5">
+                </div>
+                <div id="kav6">
+                </div>
+                <div id="kav7">
+                </div>
+                <div id="kav8">
+                </div>
+                <div id="kav9">
+                </div>
+                <div id="kav10">
+                </div>
+                <div id="kav11">
+                </div>
+                <div id="kav12">
+                </div>
+                <div id="kav13">
+                </div>
+                <div id="kav14">
+                </div>
+                <div id="kav15">
+                </div>
+                <h2 id="tavim"></h2>
             </div>
-           
-            <h2 id="name">distance:</h2>
-            <h2 id="distance"></h2>
+
+            <br><br><br><br>
+            <h2 id="tavim"></h2>
             <div class="piano">
                 <div class="key"></div>
                 <div class="key" id="k8"></div>
@@ -87,12 +142,12 @@
         <a href="components.html">Components</a>
         <a href="ContactUs.html">Contact Us</a>
         <img class="logo" src="" alt="">
-        <p>Melody Settings</p>
     </nav>
     <footer>
         <h1>About Us</h1>
-        <h4>We have a vision to create a connection between music and electronics, and a desire to create music with our electronic knowledge <br>
-        and experience music in ways we never thought we could experience.</h4>
+        <h4>We have a vision to create a connection between music and electronics, and a desire to create music with our
+            electronic knowledge <br>
+            and experience music in ways we never thought we could experience.</h4>
         <h4>
             Come join us on this journey. We hope you will experience this journey in a unique way!
         </h4>

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RXTX
-Sun Jan 28 18:13:25 2024
+Mon Mar 04 15:14:52 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,13 +13,20 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |rxtx|HC-SR04:inst17|dis_meter_sm:inst1|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. State Machine - |rxtx|ADSR:inst42|state
+  9. State Machine - |rxtx|HC-SR04:inst17|dis_meter_sm:inst1|state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: RGB_ring:inst33
+ 17. Parameter Settings for Inferred Entity Instance: f_vol:inst40|lpm_mult:Mult0
+ 18. lpm_mult Parameter Settings by Entity Instance
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +53,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 28 18:13:25 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 04 15:14:52 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RXTX                                        ;
 ; Top-level Entity Name              ; rxtx                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 319                                         ;
-;     Total combinational functions  ; 301                                         ;
-;     Dedicated logic registers      ; 163                                         ;
-; Total registers                    ; 163                                         ;
-; Total pins                         ; 65                                          ;
+; Total logic elements               ; 437                                         ;
+;     Total combinational functions  ; 419                                         ;
+;     Dedicated logic registers      ; 216                                         ;
+; Total registers                    ; 216                                         ;
+; Total pins                         ; 84                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -164,33 +171,63 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------+---------+
-; HC-SR04.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/LIHI/git/Digital musical instrument/HC-SR04.bdf        ;         ;
-; tx.vhd                           ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/tx.vhd             ;         ;
-; my_rx.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/my_rx.vhd          ;         ;
-; half8.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/half8.vhd          ;         ;
-; clkdiv.vhd                       ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/clkdiv.vhd         ;         ;
-; boud.vhd                         ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/boud.vhd           ;         ;
-; rxtx.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/LIHI/git/Digital musical instrument/rxtx.bdf           ;         ;
-; bin2hex.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/bin2hex.vhd        ;         ;
-; dis_meter_sm.vhd                 ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/dis_meter_sm.vhd   ;         ;
-; clk_div_58msec.vhd               ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/clk_div_58msec.vhd ;         ;
-; padding.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/padding.vhd        ;         ;
-; bit_div.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/bit_div.vhd        ;         ;
-; padding_tx.vhd                   ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/padding_tx.vhd     ;         ;
-; trigger.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/trigger.vhd        ;         ;
-; keyboard.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/LIHI/git/Digital musical instrument/keyboard.bdf       ;         ;
-; sound_div.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/sound_div.vhd      ;         ;
-; p_encoder.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/p_encoder.vhd      ;         ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
+; HC-SR04.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/LIHI/git/Digital musical instrument/HC-SR04.bdf                             ;         ;
+; tx.vhd                           ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/tx.vhd                                  ;         ;
+; my_rx.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/my_rx.vhd                               ;         ;
+; half8.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/half8.vhd                               ;         ;
+; clkdiv.vhd                       ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/clkdiv.vhd                              ;         ;
+; boud.vhd                         ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/boud.vhd                                ;         ;
+; rxtx.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/LIHI/git/Digital musical instrument/rxtx.bdf                                ;         ;
+; bin2hex.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/bin2hex.vhd                             ;         ;
+; dis_meter_sm.vhd                 ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/dis_meter_sm.vhd                        ;         ;
+; clk_div_58msec.vhd               ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/clk_div_58msec.vhd                      ;         ;
+; padding.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/padding.vhd                             ;         ;
+; bit_div.vhd                      ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/bit_div.vhd                             ;         ;
+; padding_tx.vhd                   ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/padding_tx.vhd                          ;         ;
+; RGB_ring.vhd                     ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/RGB_ring.vhd                            ;         ;
+; div_rx.vhd                       ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/div_rx.vhd                              ;         ;
+; ADSR.vhd                         ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/ADSR.vhd                                ;         ;
+; dac_wave.vhd                     ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/dac_wave.vhd                            ;         ;
+; f_vol.vhd                        ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/f_vol.vhd                               ;         ;
+; ADR.vhd                          ; yes             ; User VHDL File                           ; C:/LIHI/git/Digital musical instrument/ADR.vhd                                 ;         ;
+; trigger.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/trigger.vhd                             ;         ;
+; keyboard.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/LIHI/git/Digital musical instrument/keyboard.bdf                            ;         ;
+; sound_div.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/sound_div.vhd                           ;         ;
+; p_encoder.vhd                    ; yes             ; Auto-Found VHDL File                     ; C:/LIHI/git/Digital musical instrument/p_encoder.vhd                           ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mul_lfrg.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mul_lfrg.tdf            ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_drg.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/LIHI/git/Digital musical instrument/db/add_sub_drg.tdf                      ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -198,57 +235,77 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 319       ;
+; Estimated Total logic elements              ; 437       ;
 ;                                             ;           ;
-; Total combinational functions               ; 301       ;
+; Total combinational functions               ; 419       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 134       ;
-;     -- 3 input functions                    ; 29        ;
-;     -- <=2 input functions                  ; 138       ;
+;     -- 4 input functions                    ; 186       ;
+;     -- 3 input functions                    ; 66        ;
+;     -- <=2 input functions                  ; 167       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 182       ;
-;     -- arithmetic mode                      ; 119       ;
+;     -- normal mode                          ; 275       ;
+;     -- arithmetic mode                      ; 144       ;
 ;                                             ;           ;
-; Total registers                             ; 163       ;
-;     -- Dedicated logic registers            ; 163       ;
+; Total registers                             ; 216       ;
+;     -- Dedicated logic registers            ; 216       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 65        ;
+; I/O pins                                    ; 84        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 108       ;
-; Total fan-out                               ; 1497      ;
-; Average fan-out                             ; 2.52      ;
+; Maximum fan-out                             ; 161       ;
+; Total fan-out                               ; 2072      ;
+; Average fan-out                             ; 2.58      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                      ; Entity Name    ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+----------------+--------------+
-; |rxtx                       ; 301 (0)             ; 163 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |rxtx                                    ; rxtx           ; work         ;
-;    |HC-SR04:inst17|         ; 88 (0)              ; 63 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17                     ; HC-SR04        ; work         ;
-;       |bit_div:inst4|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|bit_div:inst4       ; bit_div        ; work         ;
-;       |clk_div_58msec:inst| ; 29 (29)             ; 22 (22)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|clk_div_58msec:inst ; clk_div_58msec ; work         ;
-;       |dis_meter_sm:inst1|  ; 18 (18)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|dis_meter_sm:inst1  ; dis_meter_sm   ; work         ;
-;       |trigger:inst2|       ; 34 (34)             ; 23 (23)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|trigger:inst2       ; trigger        ; work         ;
-;    |TX:inst6|               ; 22 (22)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|TX:inst6                           ; TX             ; work         ;
-;    |bin2hex:inst10|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst10                     ; bin2hex        ; work         ;
-;    |bin2hex:inst13|         ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst13                     ; bin2hex        ; work         ;
-;    |bin2hex:inst4|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst4                      ; bin2hex        ; work         ;
-;    |bin2hex:inst5|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst5                      ; bin2hex        ; work         ;
-;    |boud:inst|              ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|boud:inst                          ; boud           ; work         ;
-;    |clkdiv:inst9|           ; 34 (34)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|clkdiv:inst9                       ; clkdiv         ; work         ;
-;    |keyboard:inst15|        ; 80 (0)              ; 27 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|keyboard:inst15                    ; keyboard       ; work         ;
-;       |P_ENCODER:inst|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|keyboard:inst15|P_ENCODER:inst     ; P_ENCODER      ; work         ;
-;       |SOUND_DIV:inst2|     ; 73 (73)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|keyboard:inst15|SOUND_DIV:inst2    ; SOUND_DIV      ; work         ;
-;    |my_rX:inst2|            ; 37 (37)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|my_rX:inst2                        ; my_rX          ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                               ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                              ; Entity Name    ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+----------------+--------------+
+; |rxtx                                     ; 419 (0)             ; 216 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 84   ; 0            ; 0          ; |rxtx                                                                            ; rxtx           ; work         ;
+;    |HC-SR04:inst17|                       ; 88 (0)              ; 63 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17                                                             ; HC-SR04        ; work         ;
+;       |bit_div:inst4|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|bit_div:inst4                                               ; bit_div        ; work         ;
+;       |clk_div_58msec:inst|               ; 29 (29)             ; 22 (22)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|clk_div_58msec:inst                                         ; clk_div_58msec ; work         ;
+;       |dis_meter_sm:inst1|                ; 18 (18)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|dis_meter_sm:inst1                                          ; dis_meter_sm   ; work         ;
+;       |trigger:inst2|                     ; 34 (34)             ; 23 (23)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|HC-SR04:inst17|trigger:inst2                                               ; trigger        ; work         ;
+;    |RGB_ring:inst33|                      ; 103 (103)           ; 53 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|RGB_ring:inst33                                                            ; RGB_ring       ; work         ;
+;    |TX:inst6|                             ; 22 (22)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|TX:inst6                                                                   ; TX             ; work         ;
+;    |bin2hex:inst10|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst10                                                             ; bin2hex        ; work         ;
+;    |bin2hex:inst13|                       ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst13                                                             ; bin2hex        ; work         ;
+;    |bin2hex:inst4|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst4                                                              ; bin2hex        ; work         ;
+;    |bin2hex:inst5|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|bin2hex:inst5                                                              ; bin2hex        ; work         ;
+;    |boud:inst|                            ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|boud:inst                                                                  ; boud           ; work         ;
+;    |clkdiv:inst9|                         ; 34 (34)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|clkdiv:inst9                                                               ; clkdiv         ; work         ;
+;    |f_vol:inst40|                         ; 16 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|f_vol:inst40                                                               ; f_vol          ; work         ;
+;       |lpm_mult:Mult0|                    ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|f_vol:inst40|lpm_mult:Mult0                                                ; lpm_mult       ; work         ;
+;          |multcore:mult_core|             ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|f_vol:inst40|lpm_mult:Mult0|multcore:mult_core                             ; multcore       ; work         ;
+;             |mul_lfrg:$00030|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mul_lfrg:$00030             ; mul_lfrg       ; work         ;
+;             |mul_lfrg:mul_lfrg_first_mod| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mul_lfrg:mul_lfrg_first_mod ; mul_lfrg       ; work         ;
+;    |keyboard:inst15|                      ; 79 (0)              ; 27 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|keyboard:inst15                                                            ; keyboard       ; work         ;
+;       |P_ENCODER:inst|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|keyboard:inst15|P_ENCODER:inst                                             ; P_ENCODER      ; work         ;
+;       |SOUND_DIV:inst2|                   ; 72 (72)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|keyboard:inst15|SOUND_DIV:inst2                                            ; SOUND_DIV      ; work         ;
+;    |my_rX:inst2|                          ; 37 (37)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |rxtx|my_rX:inst2                                                                ; my_rX          ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |rxtx|ADSR:inst42|state                                                 ;
++---------------+---------------+---------------+-------------+--------------+------------+
+; Name          ; state.Release ; state.Sustain ; state.Decay ; state.Attack ; state.Idle ;
++---------------+---------------+---------------+-------------+--------------+------------+
+; state.Idle    ; 0             ; 0             ; 0           ; 0            ; 0          ;
+; state.Attack  ; 0             ; 0             ; 0           ; 1            ; 1          ;
+; state.Decay   ; 0             ; 0             ; 1           ; 0            ; 1          ;
+; state.Sustain ; 0             ; 1             ; 0           ; 0            ; 1          ;
+; state.Release ; 1             ; 0             ; 0           ; 0            ; 1          ;
++---------------+---------------+---------------+-------------+--------------+------------+
 
 
 Encoding Type:  One-Hot
@@ -263,14 +320,53 @@ Encoding Type:  One-Hot
 +-----------------+------------+-------------+------------------+
 
 
-+------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                     ;
-+---------------------------------------------------+--------------------+
-; Register name                                     ; Reason for Removal ;
-+---------------------------------------------------+--------------------+
-; HC-SR04:inst17|dis_meter_sm:inst1|state.wait4echo ; Lost fanout        ;
-; Total Number of Removed Registers = 1             ;                    ;
-+---------------------------------------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------+------------------------+
+; RGB_ring:inst33|current_color[5]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[6]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[7]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[4]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[2]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[1]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[3]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; RGB_ring:inst33|current_color[0]                   ; RGB_ring:inst33|current_color[1] ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                                  ;                        ;
++----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++---------------------------------------------------+------------------------------------+
+; Register name                                     ; Reason for Removal                 ;
++---------------------------------------------------+------------------------------------+
+; RGB_ring:inst33|red[7]                            ; Merged with RGB_ring:inst33|red[4] ;
+; ADSR:inst42|y[0..7]                               ; Lost fanout                        ;
+; ADSR:inst42|cnt[0..24]                            ; Lost fanout                        ;
+; ADSR:inst42|state.Idle                            ; Lost fanout                        ;
+; ADSR:inst42|state.Attack                          ; Lost fanout                        ;
+; ADSR:inst42|state.Decay                           ; Lost fanout                        ;
+; ADSR:inst42|state.Sustain                         ; Lost fanout                        ;
+; ADSR:inst42|state.Release                         ; Lost fanout                        ;
+; HC-SR04:inst17|dis_meter_sm:inst1|state.wait4echo ; Lost fanout                        ;
+; Total Number of Removed Registers = 40            ;                                    ;
++---------------------------------------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                          ;
++---------------------+--------------------+-------------------------------------------------------------------------------------------+
+; Register name       ; Reason for Removal ; Registers Removed due to This Register                                                    ;
++---------------------+--------------------+-------------------------------------------------------------------------------------------+
+; ADSR:inst42|y[7]    ; Lost Fanouts       ; ADSR:inst42|y[6], ADSR:inst42|y[5], ADSR:inst42|y[4], ADSR:inst42|y[3], ADSR:inst42|y[2], ;
+;                     ;                    ; ADSR:inst42|y[1], ADSR:inst42|y[0], ADSR:inst42|cnt[24], ADSR:inst42|state.Idle,          ;
+;                     ;                    ; ADSR:inst42|state.Attack, ADSR:inst42|state.Decay, ADSR:inst42|state.Sustain,             ;
+;                     ;                    ; ADSR:inst42|state.Release                                                                 ;
+; ADSR:inst42|cnt[10] ; Lost Fanouts       ; ADSR:inst42|cnt[23], ADSR:inst42|cnt[22], ADSR:inst42|cnt[21], ADSR:inst42|cnt[20]        ;
++---------------------+--------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -278,12 +374,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 163   ;
-; Number of registers using Synchronous Clear  ; 119   ;
+; Total registers                              ; 216   ;
+; Number of registers using Synchronous Clear  ; 148   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 27    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 71    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -294,8 +390,90 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; TX:inst6|tx_ser_out                    ; 4       ;
-; Total number of inverted registers = 1 ;         ;
+; RGB_ring:inst33|stateCurrent           ; 28      ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rxtx|ADSR:inst42|y[2]                 ;
+; 7:1                ; 25 bits   ; 100 LEs       ; 25 LEs               ; 75 LEs                 ; Yes        ; |rxtx|ADSR:inst42|cnt[18]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |rxtx|RGB_ring:inst33|current_color[5] ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |rxtx|ADSR:inst42|state                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RGB_ring:inst33 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; one_on         ; 40    ; Signed Integer                      ;
+; one_off        ; 21    ; Signed Integer                      ;
+; zero_on        ; 20    ; Signed Integer                      ;
+; zero_off       ; 41    ; Signed Integer                      ;
+; reset_time     ; 2500  ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: f_vol:inst40|lpm_mult:Mult0   ;
++------------------------------------------------+---------+---------------------+
+; Parameter Name                                 ; Value   ; Type                ;
++------------------------------------------------+---------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON      ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF     ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON      ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF     ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 2       ; Untyped             ;
+; LPM_WIDTHB                                     ; 8       ; Untyped             ;
+; LPM_WIDTHP                                     ; 10      ; Untyped             ;
+; LPM_WIDTHR                                     ; 10      ; Untyped             ;
+; LPM_WIDTHS                                     ; 1       ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED  ; Untyped             ;
+; LPM_PIPELINE                                   ; 0       ; Untyped             ;
+; LATENCY                                        ; 0       ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO      ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO      ; Untyped             ;
+; USE_EAB                                        ; OFF     ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5       ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10  ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL  ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT     ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO    ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0       ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF     ; Untyped             ;
++------------------------------------------------+---------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                      ;
++---------------------------------------+-----------------------------+
+; Name                                  ; Value                       ;
++---------------------------------------+-----------------------------+
+; Number of entity instances            ; 1                           ;
+; Entity Instance                       ; f_vol:inst40|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 2                           ;
+;     -- LPM_WIDTHB                     ; 8                           ;
+;     -- LPM_WIDTHP                     ; 10                          ;
+;     -- LPM_REPRESENTATION             ; SIGNED                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                          ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                          ;
+;     -- USE_EAB                        ; OFF                         ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                        ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                          ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                          ;
++---------------------------------------+-----------------------------+
 
 
 +-----------------------------------------------------+
@@ -303,26 +481,27 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 65                          ;
-; cycloneiii_ff         ; 163                         ;
+; boundary_port         ; 84                          ;
+; cycloneiii_ff         ; 216                         ;
 ;     CLR               ; 11                          ;
-;     ENA               ; 16                          ;
+;     ENA               ; 39                          ;
 ;     ENA CLR SCLR      ; 16                          ;
-;     SCLR              ; 103                         ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 311                         ;
-;     arith             ; 119                         ;
-;         2 data inputs ; 118                         ;
+;     ENA SCLR          ; 16                          ;
+;     SCLR              ; 116                         ;
+;     plain             ; 18                          ;
+; cycloneiii_lcell_comb ; 429                         ;
+;     arith             ; 144                         ;
+;         2 data inputs ; 143                         ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 192                         ;
+;     normal            ; 285                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 134                         ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 65                          ;
+;         4 data inputs ; 186                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 3.43                        ;
+; Average LUT depth     ; 3.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -331,7 +510,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -341,7 +520,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jan 28 18:13:03 2024
+    Info: Processing started: Mon Mar 04 15:14:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RXTX -c RXTX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -433,7 +612,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file bit_div
 Info (12021): Found 2 design units, including 1 entities, in source file padding_tx.vhd
     Info (12022): Found design unit 1: padding_tx-behave File: C:/LIHI/git/Digital musical instrument/padding_tx.vhd Line: 9
     Info (12023): Found entity 1: padding_tx File: C:/LIHI/git/Digital musical instrument/padding_tx.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rgb_ring.vhd
+    Info (12022): Found design unit 1: RGB_ring-behave File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 21
+    Info (12023): Found entity 1: RGB_ring File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div_rx.vhd
+    Info (12022): Found design unit 1: div_rx-behave File: C:/LIHI/git/Digital musical instrument/div_rx.vhd Line: 10
+    Info (12023): Found entity 1: div_rx File: C:/LIHI/git/Digital musical instrument/div_rx.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file padding3_8.vhd
+    Info (12022): Found design unit 1: padding3_8-behave File: C:/LIHI/git/Digital musical instrument/padding3_8.vhd Line: 9
+    Info (12023): Found entity 1: padding3_8 File: C:/LIHI/git/Digital musical instrument/padding3_8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file adsr.vhd
+    Info (12022): Found design unit 1: ADSR-behave File: C:/LIHI/git/Digital musical instrument/ADSR.vhd Line: 14
+    Info (12023): Found entity 1: ADSR File: C:/LIHI/git/Digital musical instrument/ADSR.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file dac_wave.vhd
+    Info (12022): Found design unit 1: dac_wave-behave File: C:/LIHI/git/Digital musical instrument/dac_wave.vhd Line: 8
+    Info (12023): Found entity 1: dac_wave File: C:/LIHI/git/Digital musical instrument/dac_wave.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file f_vol.vhd
+    Info (12022): Found design unit 1: f_vol-behave File: C:/LIHI/git/Digital musical instrument/f_vol.vhd Line: 10
+    Info (12023): Found entity 1: f_vol File: C:/LIHI/git/Digital musical instrument/f_vol.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file adr.vhd
+    Info (12022): Found design unit 1: ADR-behave File: C:/LIHI/git/Digital musical instrument/ADR.vhd Line: 10
+    Info (12023): Found entity 1: ADR File: C:/LIHI/git/Digital musical instrument/ADR.vhd Line: 5
+Info (12021): Found 0 design units, including 0 entities, in source file songs.vhd
 Info (12127): Elaborating entity "rxtx" for the top level hierarchy
+Warning (275043): Pin "piazo" is missing source
+Warning (275043): Pin "pileft" is missing source
 Info (12128): Elaborating entity "TX" for hierarchy "TX:inst6"
 Info (12128): Elaborating entity "boud" for hierarchy "boud:inst"
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:inst9"
@@ -450,20 +653,75 @@ Warning (12125): Using design file keyboard.bdf, which is not specified as a des
     Info (12023): Found entity 1: keyboard
 Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst15"
 Warning (12125): Using design file sound_div.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SOUND_DIV-behave File: C:/LIHI/git/Digital musical instrument/sound_div.vhd Line: 10
-    Info (12023): Found entity 1: SOUND_DIV File: C:/LIHI/git/Digital musical instrument/sound_div.vhd Line: 4
+    Info (12022): Found design unit 1: SOUND_DIV-behave File: C:/LIHI/git/Digital musical instrument/sound_div.vhd Line: 11
+    Info (12023): Found entity 1: SOUND_DIV File: C:/LIHI/git/Digital musical instrument/sound_div.vhd Line: 5
 Info (12128): Elaborating entity "SOUND_DIV" for hierarchy "keyboard:inst15|SOUND_DIV:inst2"
 Warning (12125): Using design file p_encoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: P_ENCODER-behave File: C:/LIHI/git/Digital musical instrument/p_encoder.vhd Line: 9
     Info (12023): Found entity 1: P_ENCODER File: C:/LIHI/git/Digital musical instrument/p_encoder.vhd Line: 4
 Info (12128): Elaborating entity "P_ENCODER" for hierarchy "keyboard:inst15|P_ENCODER:inst"
+Info (12128): Elaborating entity "RGB_ring" for hierarchy "RGB_ring:inst33"
+Info (10041): Inferred latch for "current_color[0]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[1]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[2]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[3]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[4]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[5]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[6]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (10041): Inferred latch for "current_color[7]" at RGB_ring.vhd(130) File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+Info (12128): Elaborating entity "div_rx" for hierarchy "div_rx:inst34"
+Info (12128): Elaborating entity "my_rX" for hierarchy "my_rX:inst2"
+Info (12128): Elaborating entity "f_vol" for hierarchy "f_vol:inst40"
 Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:inst4"
 Info (12128): Elaborating entity "half8" for hierarchy "half8:inst3"
-Info (12128): Elaborating entity "my_rX" for hierarchy "my_rX:inst2"
 Info (12128): Elaborating entity "padding" for hierarchy "padding:inst18"
+Info (12128): Elaborating entity "dac_wave" for hierarchy "dac_wave:inst37"
+Info (10041): Inferred latch for "u_d" at dac_wave.vhd(21) File: C:/LIHI/git/Digital musical instrument/dac_wave.vhd Line: 21
+Info (12128): Elaborating entity "ADR" for hierarchy "ADR:inst41"
+Info (12128): Elaborating entity "ADSR" for hierarchy "ADSR:inst42"
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "f_vol:inst40|Mult0" File: C:/LIHI/git/Digital musical instrument/f_vol.vhd Line: 30
+Info (12130): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: C:/LIHI/git/Digital musical instrument/f_vol.vhd Line: 30
+Info (12133): Instantiated megafunction "f_vol:inst40|lpm_mult:Mult0" with the following parameter: File: C:/LIHI/git/Digital musical instrument/f_vol.vhd Line: 30
+    Info (12134): Parameter "LPM_WIDTHA" = "2"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "10"
+    Info (12134): Parameter "LPM_WIDTHR" = "10"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 324
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mul_lfrg:mul_lfrg_first_mod", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf Line: 299
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf Line: 397
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_drg.tdf
+    Info (12023): Found entity 1: add_sub_drg File: C:/LIHI/git/Digital musical instrument/db/add_sub_drg.tdf Line: 23
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mul_lfrg:$00030", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf Line: 959
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|multcore:mult_core|mul_lfrg:$00032", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf Line: 971
+Info (12131): Elaborated megafunction instantiation "f_vol:inst40|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "f_vol:inst40|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Warning (13012): Latch RGB_ring:inst33|current_color[5] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[6] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[7] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[4] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[2] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[1] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[3] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
+Warning (13012): Latch RGB_ring:inst33|current_color[0] has unsafe behavior File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 130
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RGB_ring:inst33|currentLedBit[4] File: C:/LIHI/git/Digital musical instrument/RGB_ring.vhd Line: 32
 Info (13000): Registers with preset signals will power-up high File: C:/LIHI/git/Digital musical instrument/tx.vhd Line: 7
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "piazo" is stuck at GND
+    Warning (13410): Pin "pileft" is stuck at GND
     Warning (13410): Pin "highB[6]" is stuck at GND
     Warning (13410): Pin "highB[5]" is stuck at GND
     Warning (13410): Pin "highB[4]" is stuck at GND
@@ -481,17 +739,27 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register TX:inst6|tx_ser_out will power up to High File: C:/LIHI/git/Digital musical instrument/tx.vhd Line: 7
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 39 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 384 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 53 output pins
-    Info (21061): Implemented 319 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Sun Jan 28 18:13:25 2024
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:07
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw_r[2]"
+    Warning (15610): No output dependent on input pin "sw_r[1]"
+    Warning (15610): No output dependent on input pin "sw_r[0]"
+    Warning (15610): No output dependent on input pin "sw_d[2]"
+    Warning (15610): No output dependent on input pin "sw_d[1]"
+    Warning (15610): No output dependent on input pin "sw_d[0]"
+    Warning (15610): No output dependent on input pin "sw_a[2]"
+    Warning (15610): No output dependent on input pin "sw_a[1]"
+    Warning (15610): No output dependent on input pin "sw_a[0]"
+Info (21057): Implemented 521 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 63 output pins
+    Info (21061): Implemented 437 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Mon Mar 04 15:14:52 2024
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:06
 
 

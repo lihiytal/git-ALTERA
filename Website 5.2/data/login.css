@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 10px;
+    color:#3f8881;
+    background-color: #ddd;
+}
+
+.container {
+    width: 300px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+    color:#3f8881;
+}
+nav{
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    background-color:#3f8881;
+    border-radius: 30px 30px 0 0;
+}
+nav a{
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding:20px;
+    text-decoration: none;
+}
+nav p {
+    float: right;
+    margin: 0;
+    padding:20px;
+  }
+.high a:hover {
+    background-color: whitesmoke;
+    color: #3f8881;
+    border-radius: 30px 30px 0 0;
+  }
+h2 {
+    text-align: center;
+    color: #295753;
+    font-size:xx-large;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+#signForm {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    background-color: #3f88810e;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #3f888163;
+    border-radius: 4px;
+    
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #3f888163;
+    border-radius: 4px;
+    background-color: #295753;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4c817d;
+    transition: 1s;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      margin: 20px 0;
+    }
+  
+    header {
+      padding: 10px;
+    }
+  
+    nav a,
+    nav p {
+      float: none;
+      display: block;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    nav {
+      border-radius: 0;
+    }
+  
+    .low a:hover {
+      background-color: whitesmoke;
+      color: #3f8881;
+      border-radius: 0;
+    }
+  
+    .high a:hover {
+      background-color: whitesmoke;
+      color: #3f8881;
+      border-radius: 0;
+    }
+  
+    .low {
+      border-radius: 0;
+      padding-top: 10px;
+    }
+  
+    .row {
+      padding: 10px;
+      flex-direction: column;
+    }
+  
+    .side,
+    .row,
+    .piano {
+      width: 100%;
+    }
+  
+    .key {
+      width: 8%;
+      margin: 0.5%;
+    }
+  
+    #but,
+    .caftor {
+      margin: 10px 20%;
+    }
+  
+    .side {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    #mar {
+      text-align: center;
+    }
+  
+    #mar label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+      margin: 2px;
+      padding: 2px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+    }
+  
+    .my-form label,
+    .my-form textarea {
+      display: block;
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+  
+    .my-form input[type="text"],
+    .my-form input[type="email"],
+    .my-form select,
+    .my-form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+  }

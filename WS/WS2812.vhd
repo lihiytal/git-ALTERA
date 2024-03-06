@@ -28,30 +28,30 @@ begin
 		variable delay_low_counter : integer := 0;
 		variable index : integer := 0;
 		variable bit_counter : integer := 0;
-		variable LED : LED_ring := (x"0017D8", -- LED 0, Green Red Blue
-											 x"0015DA", -- LED 2
-											 x"0013DC", -- LED 4
-											 x"0011DE", -- LED 6
-											 x"000FF0", -- LED 8
-											 x"000DF2", -- LED 10
-											 x"000BF4", -- LED 12
-											 x"0009F6", -- LED 14
-											 x"0007F8", -- LED 16
-											 x"0005FA", -- LED 18
-											 x"0003FC", -- LED 20
-											 x"0001FE", -- LED 22
-											 x"0016D9", -- LED 1
-											 x"0014DB", -- LED 3
-											 x"0012DD", -- LED 5
-											 x"0010DF", -- LED 7
-											 x"000EF1", -- LED 9
-											 x"000CF3", -- LED 11
-											 x"000AF5", -- LED 13
-											 x"0008F7", -- LED 15
-											 x"0006F9", -- LED 17
-											 x"0004FB", -- LED 19
-											 x"0002FD", -- LED 21
-											 x"0000FF"); -- LED 23
+		variable LED : LED_ring := (x"0FF000",
+											 x"0FF000",
+											 x"0F3000",
+											 x"0F3000",
+											 x"0E7000",
+											 x"0DB000",
+											 x"0CF000",
+											 x"0C3000",
+											 x"0B7000",
+											 x"0AB000",
+											 x"09F000",
+											 x"093000",
+											 x"087000",
+											 x"07B000",
+											 x"06F000",
+											 x"063000",
+											 x"057000",
+											 x"04B000",
+											 x"03F000",
+											 x"033000",
+											 x"027000",
+											 x"01B000",
+											 x"00F000",
+											 x"003000");
 	begin
 		wait until rising_edge(clk);
 	

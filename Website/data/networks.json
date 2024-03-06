@@ -1,9 +1,10 @@
 {
     "networks": [
-        {"ssid": "WiFi SSID", "password": "WiFi Password"},
+        {"ssid": "Atuda", "password": "22222222"},
         {"ssid": "Kinneret College", "password": ""},
         {"ssid": "KinCollege", "password": ""},
         {"ssid": "AndroidAP", "password": "878500Snoop"},
-        {"ssid": "Talid-Net", "password": "31957053taL"}
+        {"ssid": "Talid-Net", "password": "31957053taL"},
+        {"ssid": "Nivi's iPhone", "password": "12345678"}
     ]
 }

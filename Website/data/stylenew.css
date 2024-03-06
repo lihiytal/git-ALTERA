@@ -17,17 +17,20 @@ header {
   text-align: center;
   color: #3f8881;
 }
-#cot{
+
+#cot {
   flex-wrap: wrap;
   padding: 20px;
   display: block;
   margin: 10px 0;
   overflow: hidden;
 }
-header h1{
+
+header h1 {
   text-align: center;
   display: inline-block;
 }
+
 nav {
   /* position: fixed;
   top: 10px; */
@@ -277,12 +280,14 @@ footer {
   nav {
     border-radius: 0;
   }
-  .low a:hover{
+
+  .low a:hover {
     background-color: whitesmoke;
     color: #3f8881;
     border-radius: 0;
   }
-  .high a:hover{
+
+  .high a:hover {
     background-color: whitesmoke;
     color: #3f8881;
     border-radius: 0;
@@ -333,30 +338,31 @@ footer {
     margin-bottom: 15px;
     margin: 2px;
     padding: 2px;
-}
+  }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
     width: 100%;
-}
-.my-form label,
-    .my-form textarea {
-        display: block;
-        text-align: left;
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 5px;
-    }
+  }
 
-    .my-form input[type="text"],
-    .my-form input[type="email"],
-    .my-form select,
-    .my-form textarea {
-        width: calc(100% - 20px);
-        padding: 10px;
-        box-sizing: border-box;
-    }
+  .my-form label,
+  .my-form textarea {
+    display: block;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .my-form input[type="text"],
+  .my-form input[type="email"],
+  .my-form select,
+  .my-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
 }

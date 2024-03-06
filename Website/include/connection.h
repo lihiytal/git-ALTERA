@@ -44,6 +44,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void setupAll()
 {
+  initiateFiles();
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
   {
     Serial.println("SSD1306 allocation failed");
@@ -83,9 +84,12 @@ void setupAll()
       Serial.println("An Error has occurred while mounting SPIFFS");
       return;
     }
-    if(isConnected)//dont load the files if not connected to wifi lol
-      initiateFiles();
-  }
+    //if(isConnected)//dont load the files if not connected to wifi 
+  }  
+  server.on("/networks.json", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+      request->send(SPIFFS, "/networks.json", "text/plain");
+            });
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             {
     if (isConnected) {
@@ -107,6 +111,7 @@ String getContentType(const String& filename) {
 
 void initiateFiles()
 {
+  Serial.println("started file initalization");
     int numFiles = sizeof(files) / sizeof(files[0]);
     for(int i = 0; i < numFiles; i++) {
         String filePath = files[i];
@@ -118,6 +123,7 @@ void initiateFiles()
 }
 void firebaseCon()
 {
+  Serial.println("started firebase auth");
   config.host = fb_url;
   config.api_key = fb_api;
   auth.user.email = fb_email;
@@ -129,6 +135,7 @@ void firebaseCon()
   {
     Serial.println(fbdoListener.errorReason());
   }
+  Serial.println("finished firebase auth");
 }
 
 
@@ -158,8 +165,10 @@ void wifiStatus(String ssid)
     // set isconnected to true so it loads the main html instead
     Serial.println("Connected to Wi-Fi: " + ssid);
     Serial.println("IP address: " + WiFi.localIP().toString());
-    setScreenText("Connected to Wi-Fi: " + ssid + "\nIP address:\n" + WiFi.localIP().toString());
+    Serial.println("set text");
+    //setScreenText("Connected to Wi-Fi: " + ssid + "\nIP address:\n" + WiFi.localIP().toString());
     esp_task_wdt_init(8, true);
+    Serial.println("started firebase con");
     firebaseCon();
   }
   else

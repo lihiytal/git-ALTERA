@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity songs is
+port (clk : in bit;
+		dm: in bit_VECTOR (1 downto 0);
+		key:in integer range 0 to 8;
+		LED:in integer range 0 to 8);
+end;
+
+architecture behave of songs is
+type song is array (0 to 23) of integer;
+constant marry  : song := (2,3,4,3,2,2,
+									2,3,3,3,2,2,
+									2,2,3,4,3,2,
+									2,2,0,0,0,0);
+constant marry  : song := (7,6,5,7,5,7,
+									5,6,5,4,5,6,
+									4,5,4,3,5,3,
+									5,3,4,0,0,0);
+
+--25 tav
+
+begin
+
+	process(clk)
+	begin
+		if clk'event and clk='1' then
+			if key_s='1' and state=Idle then state <= Attack;
+			elsif key_s='0' and (state=Attack or state=Decay or state=Sustain) then state <= Release;
+			end if;
+			if y=1 and state=Release then state <= Idle;
+			elsif y=254 and state=Attack then state <= Decay;
+			elsif y=sustain_vol+1 and state=Decay then state <= Sustain;
+			end if;
+		end if;
+	end process;
+
+	process(clk)
+	begin
+		if clk'event and clk='1' then
+			case state is
+				when Attack => cnt <= cnt + 1;
+									if cnt=A then y <= y + 1; 
+									cnt <= 0;
+									end if;
+				when Decay => 	cnt <= cnt + 1;
+									if cnt=D then y <= y - 1; 
+									cnt <= 0; 
+									end if;
+				when Release => cnt <= cnt + 1;
+									 if cnt=R then y <= y - 1; 
+									 cnt <= 0; 
+									 end if;
+				when others => y <= y;
+			end case;
+		end if;
+	end process;
+end behave;

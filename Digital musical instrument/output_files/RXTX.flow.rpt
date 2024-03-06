@@ -1,5 +1,5 @@
 Flow report for RXTX
-Sun Jan 28 18:13:48 2024
+Mon Mar 04 15:15:21 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Jan 28 18:13:48 2024       ;
+; Flow Status                        ; Successful - Mon Mar 04 15:15:21 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RXTX                                        ;
 ; Top-level Entity Name              ; rxtx                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 320 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 304 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 163 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 163                                         ;
-; Total pins                         ; 65 / 360 ( 18 % )                           ;
+; Total logic elements               ; 443 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 422 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 216 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 216                                         ;
+; Total pins                         ; 84 / 360 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/28/2024 18:13:05 ;
+; Start date & time ; 03/04/2024 15:14:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RXTX                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 105658697452582.170645838518812        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 105658697452582.170955807023188        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:\LIHI\git\Digital musical instrument ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -105,12 +105,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 4793 MB             ; 00:00:07                           ;
-; Fitter                    ; 00:00:12     ; 1.1                     ; 5636 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4821 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4638 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:23     ; 1.0                     ; 4806 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:17     ; 1.1                     ; 5644 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4823 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:47     ; --                      ; --                  ; 00:00:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

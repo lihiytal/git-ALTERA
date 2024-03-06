@@ -1,4 +1,12 @@
 
+State Machine - |rxtx|ADSR:inst42|state
+Name state.Release state.Sustain state.Decay state.Attack state.Idle 
+state.Idle 0 0 0 0 0 
+state.Attack 0 0 0 1 1 
+state.Decay 0 0 1 0 1 
+state.Sustain 0 1 0 0 1 
+state.Release 1 0 0 0 1 
+
 State Machine - |rxtx|HC-SR04:inst17|dis_meter_sm:inst1|state
 Name state.noel state.sofer state.wait4echo 
 state.wait4echo 0 0 0 

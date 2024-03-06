@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity f_vol is 
+port(	f : in integer range 0 to 255;
+		vol : in integer range 0 to 15;
+	  f_out:out integer range 0 to 255 );
+end;
+architecture behave of f_vol is
+signal s_vol : integer range 0 to 255;
+begin
+	with vol select
+	s_vol <= 0 when 0,
+				15 when 1,
+				31 when 2,
+				47 when 3,
+				63 when 4,
+				79 when 5,
+				95 when 6,
+				111 when 7,
+				127 when 8,
+				143 when 9,
+				159 when 10,
+				175 when 11,
+				191 when 12,
+				207 when 13,
+				223 when 14,
+				239 when 15;
+	f_out<=f*s_vol/255;
+end behave;
