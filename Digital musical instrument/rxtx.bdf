@@ -104,7 +104,7 @@ agreement for further details.
 	(input)
 	(rect 824 592 992 608)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "sw_a[2..0]" (rect 5 0 54 17)(font "Intel Clear" ))
+	(text "sw_a[2..0]" (rect 5 0 53 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -120,7 +120,7 @@ agreement for further details.
 	(input)
 	(rect 824 608 992 624)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "sw_d[2..0]" (rect 5 0 54 17)(font "Intel Clear" ))
+	(text "sw_d[2..0]" (rect 5 0 53 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -136,7 +136,7 @@ agreement for further details.
 	(input)
 	(rect 824 624 992 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "sw_r[2..0]" (rect 5 0 52 17)(font "Intel Clear" ))
+	(text "sw_r[2..0]" (rect 5 0 51 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))

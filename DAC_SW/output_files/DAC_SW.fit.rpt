@@ -1,5 +1,5 @@
 Fitter report for DAC_SW
-Mon Mar 11 11:42:42 2024
+Thu Mar 21 13:32:49 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Mar 11 11:42:42 2024       ;
+; Fitter Status                      ; Successful - Thu Mar 21 13:32:49 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DAC_SW                                      ;
 ; Top-level Entity Name              ; DAC_SW                                      ;
@@ -157,7 +157,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.3%      ;
+;     Processors 2-4         ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -351,14 +351,14 @@ The pin-out file can be found in C:/LIHI/git/DAC_SW/output_files/DAC_SW.pin.
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; dac[0] ; Y7    ; 3        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[1] ; Y8    ; 3        ; 20           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[2] ; AA10  ; 3        ; 34           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[3] ; W11   ; 4        ; 36           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[4] ; Y11   ; 4        ; 36           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[5] ; AB13  ; 4        ; 40           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[6] ; W13   ; 4        ; 46           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dac[7] ; AA15  ; 4        ; 54           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[0] ; Y8    ; 3        ; 20           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[1] ; AA10  ; 3        ; 34           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[2] ; W11   ; 4        ; 36           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[3] ; Y11   ; 4        ; 36           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[4] ; AB13  ; 4        ; 40           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[5] ; W13   ; 4        ; 46           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[6] ; AA15  ; 4        ; 54           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dac[7] ; Y7    ; 3        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -431,12 +431,12 @@ The pin-out file can be found in C:/LIHI/git/DAC_SW/output_files/DAC_SW.pin.
 ; AA7      ; 158        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA8      ; 165        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA9      ; 169        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AA10     ; 170        ; 3        ; dac[2]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AA10     ; 170        ; 3        ; dac[1]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AA11     ; 180        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA12     ; 182        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA13     ; 197        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; --       ; --           ;
 ; AA14     ; 201        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AA15     ; 205        ; 4        ; dac[7]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AA15     ; 205        ; 4        ; dac[6]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AA16     ; 211        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA17     ; 212        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA18     ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
@@ -456,7 +456,7 @@ The pin-out file can be found in C:/LIHI/git/DAC_SW/output_files/DAC_SW.pin.
 ; AB10     ; 177        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB11     ; 179        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB12     ; 181        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AB13     ; 183        ; 4        ; dac[5]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AB13     ; 183        ; 4        ; dac[4]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AB14     ; 199        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB15     ; 203        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB16     ; 209        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -850,9 +850,9 @@ The pin-out file can be found in C:/LIHI/git/DAC_SW/output_files/DAC_SW.pin.
 ; W8       ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W9       ; 144        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W10      ; 146        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; W11      ; 173        ; 4        ; dac[3]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; W11      ; 173        ; 4        ; dac[2]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W12      ; 193        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; W13      ; 195        ; 4        ; dac[6]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; W13      ; 195        ; 4        ; dac[5]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W14      ; 194        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W15      ; 206        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W16      ; 218        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -868,11 +868,11 @@ The pin-out file can be found in C:/LIHI/git/DAC_SW/output_files/DAC_SW.pin.
 ; Y4       ; 151        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y5       ; 137        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y6       ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; Y7       ; 141        ; 3        ; dac[0]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
-; Y8       ; 143        ; 3        ; dac[1]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; Y7       ; 141        ; 3        ; dac[7]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; Y8       ; 143        ; 3        ; dac[0]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 168        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; Y11      ; 175        ; 4        ; dac[4]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; Y11      ; 175        ; 4        ; dac[3]                                         ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y12      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; Y13      ; 200        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y14      ; 202        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -971,7 +971,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
 ; Name                ; Location         ; Fan-Out ; Usage       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------+------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
-; cd:inst|LessThan0~2 ; LCCOMB_X36_Y1_N4 ; 8       ; Sync. clear ; no     ; --                   ; --               ; --                        ;
+; cd:inst|LessThan0~2 ; LCCOMB_X37_Y1_N4 ; 8       ; Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; clk                 ; PIN_P11          ; 8       ; Clock       ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 +---------------------+------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
 
@@ -997,8 +997,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Global clocks         ; 1 / 20 ( 5 % )         ;
 ; Local interconnects   ; 11 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )        ;
-; R24 interconnects     ; 1 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 18 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 2 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 16 / 147,764 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -1253,31 +1253,31 @@ Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, 
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/LIHI/git/DAC_SW/output_files/DAC_SW.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 5632 megabytes
-    Info: Processing ended: Mon Mar 11 11:42:42 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Thu Mar 21 13:32:49 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+

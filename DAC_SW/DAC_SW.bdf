@@ -54,7 +54,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 816 80 992 96)
+	(rect 816 72 992 88)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "dac[7..0]" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -133,23 +133,23 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 352 384)
-	(pt 376 384)
-	(bus)
-)
-(connector
 	(pt 496 168)
 	(pt 504 168)
 	(bus)
 )
 (connector
-	(pt 504 168)
-	(pt 504 88)
+	(pt 352 384)
+	(pt 424 384)
 	(bus)
 )
 (connector
-	(pt 504 88)
-	(pt 816 88)
+	(pt 504 168)
+	(pt 504 80)
+	(bus)
+)
+(connector
+	(pt 504 80)
+	(pt 816 80)
 	(bus)
 )
 (junction (pt 664 184))

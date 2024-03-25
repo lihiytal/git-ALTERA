@@ -126,7 +126,7 @@ begin
       end case;
     end if;
   end process;
-	current_bit <= current_color(7 - currentLedBit mod 8); --when (currentled > ledwinddir - 2 and currentLed < ledwinddir + 2) else '0';
+	current_bit <= current_color(7 - currentLedBit mod 8); 
   current_color <= green when currentLedBit < 8 else
                     red when currentLedBit < 16 else
                     blue when currentLedBit < 24;

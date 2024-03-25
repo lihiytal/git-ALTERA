@@ -164,14 +164,14 @@ set_location_assignment PIN_AA6 -to RGB
 set_location_assignment PIN_V10 -to pileft
 set_global_assignment -name VHDL_FILE ADSR.vhd
 set_global_assignment -name VHDL_FILE dac_wave.vhd
-set_location_assignment PIN_Y7 -to dac[7]
-set_location_assignment PIN_Y8 -to dac[6]
-set_location_assignment PIN_AA10 -to dac[5]
-set_location_assignment PIN_W11 -to dac[4]
-set_location_assignment PIN_Y11 -to dac[3]
-set_location_assignment PIN_AB13 -to dac[2]
-set_location_assignment PIN_W13 -to dac[1]
-set_location_assignment PIN_AA15 -to dac[0]
+set_location_assignment PIN_AA15 -to dac[7]
+set_location_assignment PIN_W13 -to dac[6]
+set_location_assignment PIN_AB13 -to dac[5]
+set_location_assignment PIN_Y11 -to dac[4]
+set_location_assignment PIN_W11 -to dac[3]
+set_location_assignment PIN_AA10 -to dac[2]
+set_location_assignment PIN_Y8 -to dac[1]
+set_location_assignment PIN_Y7 -to dac[0]
 set_global_assignment -name VHDL_FILE f_vol.vhd
 set_global_assignment -name VHDL_FILE ADR.vhd
 set_global_assignment -name VHDL_FILE songs.vhd
@@ -185,3 +185,5 @@ set_location_assignment PIN_B14 -to sw_r[2]
 set_location_assignment PIN_A14 -to sw_r[1]
 set_location_assignment PIN_A13 -to sw_r[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE BlockT.bdf
+set_global_assignment -name BDF_FILE Block2.bdf

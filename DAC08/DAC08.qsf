@@ -70,14 +70,14 @@ set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
-set_location_assignment PIN_Y7 -to dacin[7]
-set_location_assignment PIN_Y8 -to dacin[6]
-set_location_assignment PIN_AA10 -to dacin[5]
-set_location_assignment PIN_W11 -to dacin[4]
-set_location_assignment PIN_Y11 -to dacin[3]
-set_location_assignment PIN_AB13 -to dacin[2]
-set_location_assignment PIN_W13 -to dacin[1]
-set_location_assignment PIN_AA15 -to dacin[0]
+set_location_assignment PIN_AA15 -to dacin[7]
+set_location_assignment PIN_W13 -to dacin[6]
+set_location_assignment PIN_AB13 -to dacin[5]
+set_location_assignment PIN_Y11 -to dacin[4]
+set_location_assignment PIN_W11 -to dacin[3]
+set_location_assignment PIN_AA10 -to dacin[2]
+set_location_assignment PIN_Y8 -to dacin[1]
+set_location_assignment PIN_Y7 -to dacin[0]
 set_global_assignment -name VHDL_FILE DAC08.vhd
 set_global_assignment -name VHDL_FILE output_files/dac_wave.vhd
 set_global_assignment -name VHDL_FILE clk_div.vhd
