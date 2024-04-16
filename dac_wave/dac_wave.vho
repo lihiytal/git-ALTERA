@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "01/11/2024 10:10:16"
+-- DATE "03/27/2024 21:30:09"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -84,27 +84,30 @@ END structure;
 LIBRARY ALTERA;
 LIBRARY FIFTYFIVENM;
 LIBRARY IEEE;
+LIBRARY STD;
 USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE FIFTYFIVENM.FIFTYFIVENM_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE STD.STANDARD.ALL;
 
 ENTITY 	dac_wave IS
     PORT (
 	clk : IN std_logic;
-	dout : BUFFER std_logic_vector(7 DOWNTO 0)
+	dout : OUT STD.STANDARD.integer range 0 TO 255
 	);
 END dac_wave;
 
 -- Design Ports Information
--- dout[0]	=>  Location: PIN_D5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[1]	=>  Location: PIN_C5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[2]	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[3]	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[4]	=>  Location: PIN_C4,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[5]	=>  Location: PIN_E8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[6]	=>  Location: PIN_B4,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- dout[7]	=>  Location: PIN_F7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clk	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[0]	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[1]	=>  Location: PIN_W13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[2]	=>  Location: PIN_AB13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[3]	=>  Location: PIN_Y11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[4]	=>  Location: PIN_W11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[5]	=>  Location: PIN_AA10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[6]	=>  Location: PIN_Y8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- dout[7]	=>  Location: PIN_Y7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF dac_wave IS
@@ -168,7 +171,7 @@ END COMPONENT;
 BEGIN
 
 ww_clk <= clk;
-dout <= ww_dout;
+dout <= IEEE.STD_LOGIC_ARITH.CONV_INTEGER(UNSIGNED(ww_dout));
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -184,7 +187,7 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
 
--- Location: LCCOMB_X44_Y41_N24
+-- Location: LCCOMB_X44_Y52_N4
 \~QUARTUS_CREATED_GND~I\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \~QUARTUS_CREATED_GND~I_combout\ = GND
@@ -197,7 +200,7 @@ GENERIC MAP (
 PORT MAP (
 	combout => \~QUARTUS_CREATED_GND~I_combout\);
 
--- Location: IOOBUF_X24_Y39_N30
+-- Location: IOOBUF_X54_Y0_N30
 \dout[0]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -209,7 +212,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[0]~output_o\);
 
--- Location: IOOBUF_X24_Y39_N23
+-- Location: IOOBUF_X46_Y0_N2
 \dout[1]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -221,7 +224,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[1]~output_o\);
 
--- Location: IOOBUF_X26_Y39_N30
+-- Location: IOOBUF_X40_Y0_N16
 \dout[2]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -233,7 +236,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[2]~output_o\);
 
--- Location: IOOBUF_X26_Y39_N2
+-- Location: IOOBUF_X36_Y0_N2
 \dout[3]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -245,7 +248,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[3]~output_o\);
 
--- Location: IOOBUF_X24_Y39_N2
+-- Location: IOOBUF_X36_Y0_N9
 \dout[4]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -257,7 +260,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[4]~output_o\);
 
--- Location: IOOBUF_X24_Y39_N9
+-- Location: IOOBUF_X34_Y0_N2
 \dout[5]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -269,7 +272,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[5]~output_o\);
 
--- Location: IOOBUF_X26_Y39_N23
+-- Location: IOOBUF_X20_Y0_N2
 \dout[6]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -281,7 +284,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[6]~output_o\);
 
--- Location: IOOBUF_X24_Y39_N16
+-- Location: IOOBUF_X20_Y0_N9
 \dout[7]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -293,7 +296,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \dout[7]~output_o\);
 
--- Location: IOIBUF_X0_Y18_N15
+-- Location: IOIBUF_X34_Y0_N29
 \clk~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -305,7 +308,7 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
--- Location: CLKCTRL_G3
+-- Location: CLKCTRL_G19
 \clk~inputclkctrl\ : fiftyfivenm_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -318,7 +321,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \clk~inputclkctrl_outclk\);
 
--- Location: LCCOMB_X25_Y38_N14
+-- Location: LCCOMB_X36_Y1_N14
 \cnt[0]~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[0]~8_combout\ = cnt(0) $ (VCC)
@@ -335,7 +338,7 @@ PORT MAP (
 	combout => \cnt[0]~8_combout\,
 	cout => \cnt[0]~9\);
 
--- Location: FF_X25_Y38_N15
+-- Location: FF_X36_Y1_N15
 \cnt[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -349,7 +352,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(0));
 
--- Location: LCCOMB_X25_Y38_N16
+-- Location: LCCOMB_X36_Y1_N16
 \cnt[1]~10\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[1]~10_combout\ = (\u_d~q\ & ((cnt(1) & (\cnt[0]~9\ & VCC)) # (!cnt(1) & (!\cnt[0]~9\)))) # (!\u_d~q\ & ((cnt(1) & (!\cnt[0]~9\)) # (!cnt(1) & ((\cnt[0]~9\) # (GND)))))
@@ -368,7 +371,7 @@ PORT MAP (
 	combout => \cnt[1]~10_combout\,
 	cout => \cnt[1]~11\);
 
--- Location: LCCOMB_X25_Y38_N18
+-- Location: LCCOMB_X36_Y1_N18
 \cnt[2]~12\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[2]~12_combout\ = ((\u_d~q\ $ (cnt(2) $ (!\cnt[1]~11\)))) # (GND)
@@ -387,7 +390,7 @@ PORT MAP (
 	combout => \cnt[2]~12_combout\,
 	cout => \cnt[2]~13\);
 
--- Location: FF_X25_Y38_N19
+-- Location: FF_X36_Y1_N19
 \cnt[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -401,7 +404,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(2));
 
--- Location: LCCOMB_X25_Y38_N20
+-- Location: LCCOMB_X36_Y1_N20
 \cnt[3]~14\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[3]~14_combout\ = (\u_d~q\ & ((cnt(3) & (\cnt[2]~13\ & VCC)) # (!cnt(3) & (!\cnt[2]~13\)))) # (!\u_d~q\ & ((cnt(3) & (!\cnt[2]~13\)) # (!cnt(3) & ((\cnt[2]~13\) # (GND)))))
@@ -420,7 +423,7 @@ PORT MAP (
 	combout => \cnt[3]~14_combout\,
 	cout => \cnt[3]~15\);
 
--- Location: FF_X25_Y38_N21
+-- Location: FF_X36_Y1_N21
 \cnt[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -434,7 +437,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(3));
 
--- Location: LCCOMB_X25_Y38_N22
+-- Location: LCCOMB_X36_Y1_N22
 \cnt[4]~16\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[4]~16_combout\ = ((cnt(4) $ (\u_d~q\ $ (!\cnt[3]~15\)))) # (GND)
@@ -453,7 +456,7 @@ PORT MAP (
 	combout => \cnt[4]~16_combout\,
 	cout => \cnt[4]~17\);
 
--- Location: FF_X25_Y38_N23
+-- Location: FF_X36_Y1_N23
 \cnt[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -467,7 +470,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(4));
 
--- Location: LCCOMB_X25_Y38_N24
+-- Location: LCCOMB_X36_Y1_N24
 \cnt[5]~18\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[5]~18_combout\ = (\u_d~q\ & ((cnt(5) & (\cnt[4]~17\ & VCC)) # (!cnt(5) & (!\cnt[4]~17\)))) # (!\u_d~q\ & ((cnt(5) & (!\cnt[4]~17\)) # (!cnt(5) & ((\cnt[4]~17\) # (GND)))))
@@ -486,7 +489,7 @@ PORT MAP (
 	combout => \cnt[5]~18_combout\,
 	cout => \cnt[5]~19\);
 
--- Location: FF_X25_Y38_N25
+-- Location: FF_X36_Y1_N25
 \cnt[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -500,7 +503,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(5));
 
--- Location: LCCOMB_X25_Y38_N26
+-- Location: LCCOMB_X36_Y1_N26
 \cnt[6]~20\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[6]~20_combout\ = ((cnt(6) $ (\u_d~q\ $ (!\cnt[5]~19\)))) # (GND)
@@ -519,7 +522,7 @@ PORT MAP (
 	combout => \cnt[6]~20_combout\,
 	cout => \cnt[6]~21\);
 
--- Location: FF_X25_Y38_N27
+-- Location: FF_X36_Y1_N27
 \cnt[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -533,10 +536,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(6));
 
--- Location: LCCOMB_X25_Y38_N6
+-- Location: LCCOMB_X36_Y1_N6
 \u_d~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \u_d~2_combout\ = (cnt(1) & ((\u_d~q\) # ((cnt(6) & cnt(0))))) # (!cnt(1) & (\u_d~q\ & ((cnt(6)) # (cnt(0)))))
+-- \u_d~2_combout\ = (cnt(6) & ((\u_d~q\) # ((cnt(1) & cnt(0))))) # (!cnt(6) & (\u_d~q\ & ((cnt(1)) # (cnt(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -544,13 +547,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => cnt(1),
+	dataa => cnt(6),
 	datab => \u_d~q\,
-	datac => cnt(6),
+	datac => cnt(1),
 	datad => cnt(0),
 	combout => \u_d~2_combout\);
 
--- Location: LCCOMB_X25_Y38_N8
+-- Location: LCCOMB_X36_Y1_N8
 \u_d~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \u_d~1_combout\ = (cnt(2) & ((\u_d~q\) # ((cnt(3) & cnt(5))))) # (!cnt(2) & (\u_d~q\ & ((cnt(3)) # (cnt(5)))))
@@ -567,7 +570,7 @@ PORT MAP (
 	datad => cnt(5),
 	combout => \u_d~1_combout\);
 
--- Location: LCCOMB_X25_Y38_N28
+-- Location: LCCOMB_X36_Y1_N28
 \cnt[7]~22\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \cnt[7]~22_combout\ = \u_d~q\ $ (\cnt[6]~21\ $ (cnt(7)))
@@ -583,7 +586,7 @@ PORT MAP (
 	cin => \cnt[6]~21\,
 	combout => \cnt[7]~22_combout\);
 
--- Location: FF_X25_Y38_N29
+-- Location: FF_X36_Y1_N29
 \cnt[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -597,7 +600,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => cnt(7));
 
--- Location: LCCOMB_X25_Y38_N10
+-- Location: LCCOMB_X36_Y1_N10
 \u_d~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \u_d~0_combout\ = (cnt(2) & (cnt(4) & cnt(7))) # (!cnt(2) & ((cnt(4)) # (cnt(7))))
@@ -613,7 +616,7 @@ PORT MAP (
 	datad => cnt(7),
 	combout => \u_d~0_combout\);
 
--- Location: LCCOMB_X25_Y38_N12
+-- Location: LCCOMB_X36_Y1_N12
 \u_d~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \u_d~3_combout\ = (\u_d~2_combout\ & ((\u_d~q\) # ((\u_d~1_combout\ & \u_d~0_combout\)))) # (!\u_d~2_combout\ & (\u_d~q\ & ((\u_d~1_combout\) # (\u_d~0_combout\))))
@@ -630,7 +633,7 @@ PORT MAP (
 	datad => \u_d~0_combout\,
 	combout => \u_d~3_combout\);
 
--- Location: FF_X25_Y38_N13
+-- Location: FF_X36_Y1_N13
 u_d : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -644,7 +647,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u_d~q\);
 
--- Location: FF_X25_Y38_N17
+-- Location: FF_X36_Y1_N17
 \cnt[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (

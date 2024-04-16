@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Mar 21 13:32:49 2024
+Fitter Status : Successful - Sat Apr 13 21:59:47 2024
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DAC_SW
 Top-level Entity Name : DAC_SW
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 12 / 49,760 ( < 1 % )
-    Total combinational functions : 12 / 49,760 ( < 1 % )
-    Dedicated logic registers : 8 / 49,760 ( < 1 % )
-Total registers : 8
-Total pins : 17 / 360 ( 5 % )
+Total logic elements : 110 / 49,760 ( < 1 % )
+    Total combinational functions : 108 / 49,760 ( < 1 % )
+    Dedicated logic registers : 64 / 49,760 ( < 1 % )
+Total registers : 64
+Total pins : 47 / 360 ( 13 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

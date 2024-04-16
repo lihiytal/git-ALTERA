@@ -12,7 +12,6 @@ entity RGB_ring is
   );
   port (
     clk: in bit; 
-    color_select: in integer range 0 to 2; 
 	 s: in integer range 0 to 15;
     d_out: out bit
   );

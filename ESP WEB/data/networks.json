@@ -1,0 +1,9 @@
+{
+    "networks": [
+        {"ssid": "Atuda", "password": "22222222"},
+        {"ssid": "Kinneret College", "password": ""},
+        {"ssid": "KinCollege", "password": ""},
+        {"ssid": "Xiaomi 13T", "password": "878500Snoop"},
+        {"ssid": "Talid-Net", "password": "31957053taL"}
+    ]
+}

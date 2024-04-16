@@ -38,7 +38,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 400 384 568 400)
+	(rect 56 384 224 400)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
@@ -53,8 +53,24 @@ agreement for further details.
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 192 456 360 472)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "b" (rect 5 0 10 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
-	(rect 888 288 1064 304)
+	(rect 1272 352 1448 368)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "buzzer" (rect 90 0 120 12)(font "Arial" ))
 	(pt 0 8)
@@ -107,9 +123,60 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 712 264 848 344)
+	(rect 472 416 608 496)
+	(text "pulse" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst3" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "trig" (rect 0 0 15 12)(font "Arial" ))
+		(text "trig" (rect 21 43 36 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "pulse" (rect 0 0 25 12)(font "Arial" ))
+		(text "pulse" (rect 94 27 119 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 64))
+	)
+)
+(symbol
+	(rect 688 416 856 496)
+	(text "octava" (rect 5 0 39 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pulse" (rect 0 0 25 12)(font "Arial" ))
+		(text "pulse" (rect 21 27 46 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "octava[8..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "octava[8..0]" (rect 97 27 147 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
+	)
+)
+(symbol
+	(rect 1016 328 1168 440)
 	(text "SOUND_DIV" (rect 5 0 71 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -120,19 +187,26 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
+		(text "octava[8..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "octava[8..0]" (rect 21 43 81 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 136 32)
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 59 35 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 152 32)
 		(output)
 		(text "f" (rect 0 0 4 12)(font "Arial" ))
-		(text "f" (rect 112 27 116 39)(font "Arial" ))
-		(line (pt 136 32)(pt 120 32))
+		(text "f" (rect 128 27 131 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 120 64))
+		(rectangle (rect 16 16 136 96))
 	)
 )
 (connector
@@ -141,24 +215,13 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 568 392)
-	(pt 688 392)
-)
-(connector
-	(pt 688 392)
-	(pt 688 312)
-)
-(connector
-	(pt 688 312)
-	(pt 712 312)
-)
-(connector
-	(pt 848 296)
-	(pt 888 296)
-)
-(connector
-	(pt 656 296)
+	(pt 928 168)
 	(pt 656 168)
+	(bus)
+)
+(connector
+	(pt 656 168)
+	(pt 656 296)
 	(bus)
 )
 (connector
@@ -168,12 +231,61 @@ agreement for further details.
 )
 (connector
 	(pt 656 296)
-	(pt 712 296)
+	(pt 928 296)
 	(bus)
 )
 (connector
-	(pt 928 168)
-	(pt 656 168)
+	(pt 1168 360)
+	(pt 1272 360)
+)
+(connector
+	(pt 928 296)
+	(pt 928 360)
+	(bus)
+)
+(connector
+	(pt 928 360)
+	(pt 1016 360)
+	(bus)
+)
+(connector
+	(pt 1016 376)
+	(pt 928 376)
+	(bus)
+)
+(connector
+	(pt 688 448)
+	(pt 608 448)
+)
+(connector
+	(pt 360 464)
+	(pt 472 464)
+)
+(connector
+	(pt 472 448)
+	(pt 392 448)
+)
+(connector
+	(pt 392 448)
+	(pt 392 392)
+)
+(connector
+	(pt 224 392)
+	(pt 392 392)
+)
+(connector
+	(pt 392 392)
+	(pt 1016 392)
+)
+(connector
+	(pt 928 376)
+	(pt 928 448)
+	(bus)
+)
+(connector
+	(pt 928 448)
+	(pt 856 448)
 	(bus)
 )
 (junction (pt 656 296))
+(junction (pt 392 392))

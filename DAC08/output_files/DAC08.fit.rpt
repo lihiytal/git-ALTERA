@@ -1,5 +1,5 @@
 Fitter report for DAC08
-Thu Mar 21 13:33:45 2024
+Wed Mar 27 20:20:11 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 21 13:33:45 2024       ;
+; Fitter Status                      ; Successful - Wed Mar 27 20:20:11 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DAC08                                       ;
 ; Top-level Entity Name              ; DAC08                                       ;
@@ -155,7 +155,7 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -268,7 +268,7 @@ The pin-out file can be found in C:/LIHI/git/DAC08/output_files/DAC08.pin.
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.2% / 0.2% / 0.1%    ;
+; Peak interconnect usage (total/H/V)         ; 0.2% / 0.3% / 0.1%    ;
 ; Maximum fan-out                             ; 17                    ;
 ; Highest non-global fan-out                  ; 17                    ;
 ; Total fan-out                               ; 139                   ;
@@ -364,14 +364,14 @@ The pin-out file can be found in C:/LIHI/git/DAC08/output_files/DAC08.pin.
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; dacin[0] ; Y7    ; 3        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[1] ; Y8    ; 3        ; 20           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[2] ; AA10  ; 3        ; 34           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[3] ; W11   ; 4        ; 36           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[4] ; Y11   ; 4        ; 36           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[5] ; AB13  ; 4        ; 40           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[6] ; W13   ; 4        ; 46           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; dacin[7] ; AA15  ; 4        ; 54           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[0] ; AA15  ; 4        ; 54           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[1] ; W13   ; 4        ; 46           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[2] ; AB13  ; 4        ; 40           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[3] ; Y11   ; 4        ; 36           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[4] ; W11   ; 4        ; 36           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[5] ; AA10  ; 3        ; 34           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[6] ; Y8    ; 3        ; 20           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; dacin[7] ; Y7    ; 3        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -444,12 +444,12 @@ The pin-out file can be found in C:/LIHI/git/DAC08/output_files/DAC08.pin.
 ; AA7      ; 158        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA8      ; 165        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA9      ; 169        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA10     ; 170        ; 3        ; dacin[2]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AA10     ; 170        ; 3        ; dacin[5]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AA11     ; 180        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA12     ; 182        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA13     ; 197        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; --       ; --           ;
 ; AA14     ; 201        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA15     ; 205        ; 4        ; dacin[7]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AA15     ; 205        ; 4        ; dacin[0]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AA16     ; 211        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA17     ; 212        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA18     ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
@@ -469,7 +469,7 @@ The pin-out file can be found in C:/LIHI/git/DAC08/output_files/DAC08.pin.
 ; AB10     ; 177        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB11     ; 179        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB12     ; 181        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB13     ; 183        ; 4        ; dacin[5]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AB13     ; 183        ; 4        ; dacin[2]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AB14     ; 199        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB15     ; 203        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB16     ; 209        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -863,9 +863,9 @@ The pin-out file can be found in C:/LIHI/git/DAC08/output_files/DAC08.pin.
 ; W8       ; 150        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W9       ; 144        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W10      ; 146        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; W11      ; 173        ; 4        ; dacin[3]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; W11      ; 173        ; 4        ; dacin[4]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W12      ; 193        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; W13      ; 195        ; 4        ; dacin[6]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; W13      ; 195        ; 4        ; dacin[1]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W14      ; 194        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W15      ; 206        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W16      ; 218        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -881,11 +881,11 @@ The pin-out file can be found in C:/LIHI/git/DAC08/output_files/DAC08.pin.
 ; Y4       ; 151        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y5       ; 137        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y6       ; 139        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y7       ; 141        ; 3        ; dacin[0]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
-; Y8       ; 143        ; 3        ; dacin[1]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; Y7       ; 141        ; 3        ; dacin[7]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; Y8       ; 143        ; 3        ; dacin[6]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 168        ; 3        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y11      ; 175        ; 4        ; dacin[4]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; Y11      ; 175        ; 4        ; dacin[3]                                       ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y12      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; Y13      ; 200        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y14      ; 202        ; 4        ; RESERVED_INPUT                                 ;        ;                       ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -983,14 +983,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
 ; Block interconnects   ; 22 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 2 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 18 / 106,704 ( < 1 % ) ;
-; Direct links          ; 5 / 148,641 ( < 1 % )  ;
+; C16 interconnects     ; 3 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 17 / 106,704 ( < 1 % ) ;
+; Direct links          ; 4 / 148,641 ( < 1 % )  ;
 ; Global clocks         ; 2 / 20 ( 10 % )        ;
 ; Local interconnects   ; 23 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )        ;
 ; R24 interconnects     ; 2 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 20 / 147,764 ( < 1 % ) ;
+; R4 interconnects      ; 25 / 147,764 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -1283,32 +1283,32 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "piz" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/LIHI/git/DAC08/output_files/DAC08.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 5630 megabytes
-    Info: Processing ended: Thu Mar 21 13:33:46 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 5631 megabytes
+    Info: Processing ended: Wed Mar 27 20:20:12 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+

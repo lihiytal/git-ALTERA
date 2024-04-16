@@ -1,13 +1,45 @@
 |DAC_SW
-dac[0] <= cd:inst.cnt[0]
-dac[1] <= cd:inst.cnt[1]
-dac[2] <= cd:inst.cnt[2]
-dac[3] <= cd:inst.cnt[3]
-dac[4] <= cd:inst.cnt[4]
-dac[5] <= cd:inst.cnt[5]
-dac[6] <= cd:inst.cnt[6]
-dac[7] <= cd:inst.cnt[7]
+b <= octava:inst6.b
+clk => pulse_sw:inst19.clk
 clk => cd:inst.clk
+b_blue => pulse_sw:inst19.trig
+b_blue => padding1:inst17.old
+dac[0] <= dac_wave:inst2.dout[0]
+dac[1] <= dac_wave:inst2.dout[1]
+dac[2] <= dac_wave:inst2.dout[2]
+dac[3] <= dac_wave:inst2.dout[3]
+dac[4] <= dac_wave:inst2.dout[4]
+dac[5] <= dac_wave:inst2.dout[5]
+dac[6] <= dac_wave:inst2.dout[6]
+dac[7] <= dac_wave:inst2.dout[7]
+highB[0] <= bin2dex:inst11.segment[0]
+highB[1] <= bin2dex:inst11.segment[1]
+highB[2] <= bin2dex:inst11.segment[2]
+highB[3] <= bin2dex:inst11.segment[3]
+highB[4] <= bin2dex:inst11.segment[4]
+highB[5] <= bin2dex:inst11.segment[5]
+highB[6] <= bin2dex:inst11.segment[6]
+highC[0] <= bin2dex:inst8.segment[0]
+highC[1] <= bin2dex:inst8.segment[1]
+highC[2] <= bin2dex:inst8.segment[2]
+highC[3] <= bin2dex:inst8.segment[3]
+highC[4] <= bin2dex:inst8.segment[4]
+highC[5] <= bin2dex:inst8.segment[5]
+highC[6] <= bin2dex:inst8.segment[6]
+lowB[0] <= bin2dex:inst13.segment[0]
+lowB[1] <= bin2dex:inst13.segment[1]
+lowB[2] <= bin2dex:inst13.segment[2]
+lowB[3] <= bin2dex:inst13.segment[3]
+lowB[4] <= bin2dex:inst13.segment[4]
+lowB[5] <= bin2dex:inst13.segment[5]
+lowB[6] <= bin2dex:inst13.segment[6]
+lowC[0] <= bin2dex:inst10.segment[0]
+lowC[1] <= bin2dex:inst10.segment[1]
+lowC[2] <= bin2dex:inst10.segment[2]
+lowC[3] <= bin2dex:inst10.segment[3]
+lowC[4] <= bin2dex:inst10.segment[4]
+lowC[5] <= bin2dex:inst10.segment[5]
+lowC[6] <= bin2dex:inst10.segment[6]
 sw[0] => ~NO_FANOUT~
 sw[1] => ~NO_FANOUT~
 sw[2] => ~NO_FANOUT~
@@ -18,25 +50,55 @@ sw[6] => ~NO_FANOUT~
 sw[7] => ~NO_FANOUT~
 
 
-|DAC_SW|cd:inst
-clk => y~reg0.CLK
-clk => cnt[0]~reg0.CLK
-clk => cnt[1]~reg0.CLK
-clk => cnt[2]~reg0.CLK
-clk => cnt[3]~reg0.CLK
-clk => cnt[4]~reg0.CLK
-clk => cnt[5]~reg0.CLK
-clk => cnt[6]~reg0.CLK
-clk => cnt[7]~reg0.CLK
-cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[7] <= cnt[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|DAC_SW|octava:inst6
+pulse => cnt[0].CLK
+pulse => cnt[1].CLK
+pulse => cnt[2].CLK
+pulse => cnt[3].CLK
+octava[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+octava[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+octava[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+octava[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+oct[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+oct[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+oct[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+oct[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+oct[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+oct[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+oct[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+oct[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+b <= <GND>
+
+
+|DAC_SW|pulse_sw:inst19
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+trig => enable.CLK
+trig => pulse~reg0.CLK
+pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DAC_SW|dac_wave:inst2
@@ -56,5 +118,275 @@ dout[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
 dout[5] <= cnt[5].DB_MAX_OUTPUT_PORT_TYPE
 dout[6] <= cnt[6].DB_MAX_OUTPUT_PORT_TYPE
 dout[7] <= cnt[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|cd:inst
+clk => y~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+clk => cnt[6]~reg0.CLK
+clk => cnt[7]~reg0.CLK
+clk => cnt[8]~reg0.CLK
+clk => cnt[9]~reg0.CLK
+clk => cnt[10]~reg0.CLK
+clk => cnt[11]~reg0.CLK
+clk => cnt[12]~reg0.CLK
+clk => cnt[13]~reg0.CLK
+clk => cnt[14]~reg0.CLK
+clk => cnt[15]~reg0.CLK
+clk => cnt[16]~reg0.CLK
+clk => cnt[17]~reg0.CLK
+clk => cnt[18]~reg0.CLK
+clk => cnt[19]~reg0.CLK
+clk => cnt[20]~reg0.CLK
+clk => cnt[21]~reg0.CLK
+clk => cnt[22]~reg0.CLK
+clk => cnt[23]~reg0.CLK
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[7] <= cnt[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[8] <= cnt[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[9] <= cnt[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[10] <= cnt[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[11] <= cnt[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[12] <= cnt[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[13] <= cnt[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[14] <= cnt[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[15] <= cnt[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[16] <= cnt[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[17] <= cnt[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[18] <= cnt[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[19] <= cnt[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[20] <= cnt[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[23] <= cnt[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|bin2dex:inst11
+binin[0] => Mux0.IN19
+binin[0] => Mux1.IN19
+binin[0] => Mux2.IN19
+binin[0] => Mux3.IN19
+binin[0] => Mux4.IN19
+binin[0] => Mux5.IN19
+binin[0] => Mux6.IN19
+binin[1] => Mux0.IN18
+binin[1] => Mux1.IN18
+binin[1] => Mux2.IN18
+binin[1] => Mux3.IN18
+binin[1] => Mux4.IN18
+binin[1] => Mux5.IN18
+binin[1] => Mux6.IN18
+binin[2] => Mux0.IN17
+binin[2] => Mux1.IN17
+binin[2] => Mux2.IN17
+binin[2] => Mux3.IN17
+binin[2] => Mux4.IN17
+binin[2] => Mux5.IN17
+binin[2] => Mux6.IN17
+binin[3] => Mux0.IN16
+binin[3] => Mux1.IN16
+binin[3] => Mux2.IN16
+binin[3] => Mux3.IN16
+binin[3] => Mux4.IN16
+binin[3] => Mux5.IN16
+binin[3] => Mux6.IN16
+segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|half8:inst12
+byte[0] => low[0].DATAIN
+byte[1] => low[1].DATAIN
+byte[2] => low[2].DATAIN
+byte[3] => low[3].DATAIN
+byte[4] => high[0].DATAIN
+byte[5] => high[1].DATAIN
+byte[6] => high[2].DATAIN
+byte[7] => high[3].DATAIN
+high[0] <= byte[4].DB_MAX_OUTPUT_PORT_TYPE
+high[1] <= byte[5].DB_MAX_OUTPUT_PORT_TYPE
+high[2] <= byte[6].DB_MAX_OUTPUT_PORT_TYPE
+high[3] <= byte[7].DB_MAX_OUTPUT_PORT_TYPE
+low[0] <= byte[0].DB_MAX_OUTPUT_PORT_TYPE
+low[1] <= byte[1].DB_MAX_OUTPUT_PORT_TYPE
+low[2] <= byte[2].DB_MAX_OUTPUT_PORT_TYPE
+low[3] <= byte[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|padding:inst14
+old[0] => n_ew[0].DATAIN
+old[1] => n_ew[1].DATAIN
+old[2] => n_ew[2].DATAIN
+old[3] => n_ew[3].DATAIN
+n_ew[0] <= old[0].DB_MAX_OUTPUT_PORT_TYPE
+n_ew[1] <= old[1].DB_MAX_OUTPUT_PORT_TYPE
+n_ew[2] <= old[2].DB_MAX_OUTPUT_PORT_TYPE
+n_ew[3] <= old[3].DB_MAX_OUTPUT_PORT_TYPE
+n_ew[4] <= <GND>
+n_ew[5] <= <GND>
+n_ew[6] <= <GND>
+n_ew[7] <= <GND>
+
+
+|DAC_SW|bin2dex:inst8
+binin[0] => Mux0.IN19
+binin[0] => Mux1.IN19
+binin[0] => Mux2.IN19
+binin[0] => Mux3.IN19
+binin[0] => Mux4.IN19
+binin[0] => Mux5.IN19
+binin[0] => Mux6.IN19
+binin[1] => Mux0.IN18
+binin[1] => Mux1.IN18
+binin[1] => Mux2.IN18
+binin[1] => Mux3.IN18
+binin[1] => Mux4.IN18
+binin[1] => Mux5.IN18
+binin[1] => Mux6.IN18
+binin[2] => Mux0.IN17
+binin[2] => Mux1.IN17
+binin[2] => Mux2.IN17
+binin[2] => Mux3.IN17
+binin[2] => Mux4.IN17
+binin[2] => Mux5.IN17
+binin[2] => Mux6.IN17
+binin[3] => Mux0.IN16
+binin[3] => Mux1.IN16
+binin[3] => Mux2.IN16
+binin[3] => Mux3.IN16
+binin[3] => Mux4.IN16
+binin[3] => Mux5.IN16
+binin[3] => Mux6.IN16
+segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|half8:inst9
+byte[0] => low[0].DATAIN
+byte[1] => low[1].DATAIN
+byte[2] => low[2].DATAIN
+byte[3] => low[3].DATAIN
+byte[4] => high[0].DATAIN
+byte[5] => high[1].DATAIN
+byte[6] => high[2].DATAIN
+byte[7] => high[3].DATAIN
+high[0] <= byte[4].DB_MAX_OUTPUT_PORT_TYPE
+high[1] <= byte[5].DB_MAX_OUTPUT_PORT_TYPE
+high[2] <= byte[6].DB_MAX_OUTPUT_PORT_TYPE
+high[3] <= byte[7].DB_MAX_OUTPUT_PORT_TYPE
+low[0] <= byte[0].DB_MAX_OUTPUT_PORT_TYPE
+low[1] <= byte[1].DB_MAX_OUTPUT_PORT_TYPE
+low[2] <= byte[2].DB_MAX_OUTPUT_PORT_TYPE
+low[3] <= byte[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|bin2dex:inst13
+binin[0] => Mux0.IN19
+binin[0] => Mux1.IN19
+binin[0] => Mux2.IN19
+binin[0] => Mux3.IN19
+binin[0] => Mux4.IN19
+binin[0] => Mux5.IN19
+binin[0] => Mux6.IN19
+binin[1] => Mux0.IN18
+binin[1] => Mux1.IN18
+binin[1] => Mux2.IN18
+binin[1] => Mux3.IN18
+binin[1] => Mux4.IN18
+binin[1] => Mux5.IN18
+binin[1] => Mux6.IN18
+binin[2] => Mux0.IN17
+binin[2] => Mux1.IN17
+binin[2] => Mux2.IN17
+binin[2] => Mux3.IN17
+binin[2] => Mux4.IN17
+binin[2] => Mux5.IN17
+binin[2] => Mux6.IN17
+binin[3] => Mux0.IN16
+binin[3] => Mux1.IN16
+binin[3] => Mux2.IN16
+binin[3] => Mux3.IN16
+binin[3] => Mux4.IN16
+binin[3] => Mux5.IN16
+binin[3] => Mux6.IN16
+segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|bin2dex:inst10
+binin[0] => Mux0.IN19
+binin[0] => Mux1.IN19
+binin[0] => Mux2.IN19
+binin[0] => Mux3.IN19
+binin[0] => Mux4.IN19
+binin[0] => Mux5.IN19
+binin[0] => Mux6.IN19
+binin[1] => Mux0.IN18
+binin[1] => Mux1.IN18
+binin[1] => Mux2.IN18
+binin[1] => Mux3.IN18
+binin[1] => Mux4.IN18
+binin[1] => Mux5.IN18
+binin[1] => Mux6.IN18
+binin[2] => Mux0.IN17
+binin[2] => Mux1.IN17
+binin[2] => Mux2.IN17
+binin[2] => Mux3.IN17
+binin[2] => Mux4.IN17
+binin[2] => Mux5.IN17
+binin[2] => Mux6.IN17
+binin[3] => Mux0.IN16
+binin[3] => Mux1.IN16
+binin[3] => Mux2.IN16
+binin[3] => Mux3.IN16
+binin[3] => Mux4.IN16
+binin[3] => Mux5.IN16
+binin[3] => Mux6.IN16
+segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DAC_SW|padding1:inst17
+old => n_ew[0].DATAIN
+n_ew[0] <= old.DB_MAX_OUTPUT_PORT_TYPE
+n_ew[1] <= <GND>
+n_ew[2] <= <GND>
+n_ew[3] <= <GND>
+n_ew[4] <= <GND>
+n_ew[5] <= <GND>
+n_ew[6] <= <GND>
+n_ew[7] <= <GND>
 
 

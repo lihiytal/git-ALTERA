@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity octava is 
+port(	b_r: in bit;
+		b_b: in bit;
+		clk: in bit;
+		octava: out integer range 0 to 256);
+end;
+architecture behave of octava is
+signal cnt: integer range 0 to 8;
+begin
+	process(clk)
+	begin
+		if clk'event and clk='1' then
+				if b_b='1' then cnt <= cnt+1;
+				elsif b_r='1' then cnt <= cnt-1;
+				end if;
+		end if;
+	end process;
+	
+	with cnt select
+	octava <= 1 when 0,
+				 2 when 1,
+				 4 when 2,
+				 8 when 3,
+				 16 when 4,
+				 32 when 5,
+				 64 when 6,
+				 128 when 7,
+				 256 when 8;
+				
+end behave;

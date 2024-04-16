@@ -63,8 +63,8 @@ set_location_assignment PIN_E16 -to lowA[2]
 set_location_assignment PIN_D17 -to lowA[1]
 set_location_assignment PIN_C17 -to lowA[0]
 set_location_assignment PIN_F15 -to rst
-set_location_assignment PIN_V9 -to RX
-set_location_assignment PIN_W10 -to tx
+set_location_assignment PIN_W8 -to RX
+set_location_assignment PIN_V8 -to tx
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_J20 -to highB[6]
@@ -89,7 +89,6 @@ set_location_assignment PIN_B10 -to leds[3]
 set_location_assignment PIN_A10 -to leds[2]
 set_location_assignment PIN_A9 -to leds[1]
 set_location_assignment PIN_A8 -to leds[0]
-set_location_assignment PIN_AB2 -to piazo
 set_location_assignment PIN_AB3 -to echo
 set_location_assignment PIN_AA5 -to trig
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
@@ -160,18 +159,18 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE RGB_ring.vhd
 set_global_assignment -name VHDL_FILE div_rx.vhd
 set_global_assignment -name VHDL_FILE padding3_8.vhd
-set_location_assignment PIN_AA6 -to RGB
+set_location_assignment PIN_AB2 -to RGB
 set_location_assignment PIN_V10 -to pileft
 set_global_assignment -name VHDL_FILE ADSR.vhd
 set_global_assignment -name VHDL_FILE dac_wave.vhd
-set_location_assignment PIN_AA15 -to dac[7]
-set_location_assignment PIN_W13 -to dac[6]
-set_location_assignment PIN_AB13 -to dac[5]
-set_location_assignment PIN_Y11 -to dac[4]
-set_location_assignment PIN_W11 -to dac[3]
-set_location_assignment PIN_AA10 -to dac[2]
-set_location_assignment PIN_Y8 -to dac[1]
-set_location_assignment PIN_Y7 -to dac[0]
+set_location_assignment PIN_Y7 -to dac[7]
+set_location_assignment PIN_Y8 -to dac[6]
+set_location_assignment PIN_AA10 -to dac[5]
+set_location_assignment PIN_W11 -to dac[4]
+set_location_assignment PIN_Y11 -to dac[3]
+set_location_assignment PIN_AB13 -to dac[2]
+set_location_assignment PIN_W13 -to dac[1]
+set_location_assignment PIN_AA15 -to dac[0]
 set_global_assignment -name VHDL_FILE f_vol.vhd
 set_global_assignment -name VHDL_FILE ADR.vhd
 set_global_assignment -name VHDL_FILE songs.vhd
@@ -184,6 +183,15 @@ set_location_assignment PIN_C12 -to sw_d[0]
 set_location_assignment PIN_B14 -to sw_r[2]
 set_location_assignment PIN_A14 -to sw_r[1]
 set_location_assignment PIN_A13 -to sw_r[0]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name BDF_FILE BlockT.bdf
 set_global_assignment -name BDF_FILE Block2.bdf
+set_global_assignment -name VHDL_FILE s_vol.vhd
+set_global_assignment -name VHDL_FILE dac.vhd
+set_global_assignment -name VHDL_FILE octava.vhd
+set_location_assignment PIN_Y4 -to b_blue
+set_location_assignment PIN_Y3 -to b_red
+set_location_assignment PIN_W10 -to b
+set_global_assignment -name VHDL_FILE pulse.vhd
+set_global_assignment -name VHDL_FILE RGB_fvol.vhd
+set_global_assignment -name VHDL_FILE output_files/dm.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

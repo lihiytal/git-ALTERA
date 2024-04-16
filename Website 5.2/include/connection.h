@@ -159,7 +159,7 @@ void wifiStatus(String ssid)
     // set isconnected to true so it loads the main html instead
     Serial.println("Connected to Wi-Fi: " + ssid);
     Serial.println("IP address: " + WiFi.localIP().toString());
-    //setScreenText("Connected to Wi-Fi: " + ssid + "\nIP address:\n" + WiFi.localIP().toString());
+    setScreenText("Connected to Wi-Fi: " + ssid + "\nIP address:\n" + WiFi.localIP().toString());
     esp_task_wdt_init(8, true);
     firebaseCon();
   }

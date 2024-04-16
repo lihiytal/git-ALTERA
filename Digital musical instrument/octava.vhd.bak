@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity octava is 
+port(	b_red: in bit;
+		b_blue: in bit;
+		octava: out integer range 0 to 8);
+end;
+architecture behave of octava is
+signal b: integer range 0 to 2: = 2;
+signal cnt: integer range 0 to 8 := 0;
+begin
+	
+	octava <=  
+end behave;

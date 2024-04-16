@@ -16,10 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "dac[7]",
-					"strict" : false
-				},
-				{
 					"name" : "dac[6]",
 					"strict" : false
 				},
@@ -41,10 +37,6 @@
 				},
 				{
 					"name" : "dac[1]",
-					"strict" : false
-				},
-				{
-					"name" : "dac[0]",
 					"strict" : false
 				},
 				{
@@ -192,7 +184,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "keyboard[5]",
+					"name" : "keyboard[7]",
 					"strict" : false
 				},
 				{
@@ -200,19 +192,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "keyboard[6]",
-					"strict" : false
-				},
-				{
 					"name" : "keyboard[3]",
-					"strict" : false
-				},
-				{
-					"name" : "keyboard[1]",
-					"strict" : false
-				},
-				{
-					"name" : "keyboard[0]",
 					"strict" : false
 				},
 				{
@@ -220,7 +200,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "keyboard[7]",
+					"name" : "keyboard[1]",
+					"strict" : false
+				},
+				{
+					"name" : "keyboard[6]",
+					"strict" : false
+				},
+				{
+					"name" : "keyboard[5]",
+					"strict" : false
+				},
+				{
+					"name" : "keyboard[0]",
 					"strict" : false
 				},
 				{
@@ -232,11 +224,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "RX",
+					"strict" : false
+				},
+				{
 					"name" : "echo",
 					"strict" : false
 				},
 				{
-					"name" : "RX",
+					"name" : "b",
 					"strict" : false
 				}
 			]

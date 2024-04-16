@@ -1,5 +1,5 @@
 Flow report for DAC08
-Thu Mar 21 13:33:58 2024
+Wed Mar 27 20:20:19 2024
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 21 13:33:58 2024       ;
+; Flow Status                        ; Successful - Wed Mar 27 20:20:19 2024       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DAC08                                       ;
 ; Top-level Entity Name              ; DAC08                                       ;
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/21/2024 13:33:17 ;
+; Start date & time ; 03/27/2024 20:19:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DAC08               ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 105658697452582.171102079722164        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 105658697452582.171156359502108        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:\LIHI\git\DAC08                      ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -100,12 +100,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 4799 MB             ; 00:00:09                           ;
-; Fitter                    ; 00:00:12     ; 1.0                     ; 5630 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4678 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4817 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4787 MB             ; 00:00:05                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5631 MB             ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4678 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4817 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4635 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

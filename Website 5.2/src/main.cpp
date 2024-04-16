@@ -59,6 +59,7 @@ void loop()
     int64_t seconds = time_since_boot / 1000000LL;  //convert it to seconds
     if ((int)seconds > pseconds)//if the current second is bigger than the last second
     {
+     // Serial.println(esp_get_free_heap_size());
       runtimeEvent.send(String(seconds).c_str());
       if (millis() - lastFirebaseSend > FIREBASE_SEND_INTERVAL)
       //predetermined delay for sending as a backup incase of errors

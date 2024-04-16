@@ -61,7 +61,7 @@ function sendValue(value,path = "")
 }
 
 // var distance = firebase.database().ref('/esp/rx');
-// // distance.on('value', distanceValue);
+// distance.on('value', distanceValue);
 // let val;
 // distance.on("value", (snapshot) => {
 //   if (mode == "FB"){

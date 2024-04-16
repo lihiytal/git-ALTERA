@@ -1,0 +1,28 @@
+|oc
+b_r => cnt.OUTPUTSELECT
+b_r => cnt.OUTPUTSELECT
+b_r => cnt.OUTPUTSELECT
+b_r => cnt.OUTPUTSELECT
+b_b => cnt.OUTPUTSELECT
+b_b => cnt.OUTPUTSELECT
+b_b => cnt.OUTPUTSELECT
+b_b => cnt.OUTPUTSELECT
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+octava[0] << cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+octava[1] << cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+octava[2] << cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+octava[3] << cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+oct[0] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+oct[1] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+oct[2] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+oct[3] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+oct[4] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+oct[5] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+oct[6] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+oct[7] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+b << <VCC>
+
+

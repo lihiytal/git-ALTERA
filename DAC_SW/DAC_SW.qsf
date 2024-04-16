@@ -55,13 +55,13 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_Y7 -to dac[7]
-set_location_assignment PIN_AA15 -to dac[6]
-set_location_assignment PIN_W13 -to dac[5]
-set_location_assignment PIN_AB13 -to dac[4]
+set_location_assignment PIN_Y8 -to dac[6]
+set_location_assignment PIN_AA10 -to dac[5]
+set_location_assignment PIN_W11 -to dac[4]
 set_location_assignment PIN_Y11 -to dac[3]
-set_location_assignment PIN_W11 -to dac[2]
-set_location_assignment PIN_AA10 -to dac[1]
-set_location_assignment PIN_Y8 -to dac[0]
+set_location_assignment PIN_AB13 -to dac[2]
+set_location_assignment PIN_W13 -to dac[1]
+set_location_assignment PIN_AA15 -to dac[0]
 set_location_assignment PIN_C10 -to sw[7]
 set_location_assignment PIN_C11 -to sw[6]
 set_location_assignment PIN_D12 -to sw[5]
@@ -72,4 +72,47 @@ set_location_assignment PIN_A13 -to sw[1]
 set_location_assignment PIN_A14 -to sw[0]
 set_global_assignment -name VHDL_FILE output_files/cd.vhd
 set_location_assignment PIN_P11 -to clk
+set_global_assignment -name VHDL_FILE octava.vhd
+set_location_assignment PIN_J20 -to highB[6]
+set_location_assignment PIN_K20 -to highB[5]
+set_location_assignment PIN_L18 -to highB[4]
+set_location_assignment PIN_N18 -to highB[3]
+set_location_assignment PIN_M20 -to highB[2]
+set_location_assignment PIN_N19 -to highB[1]
+set_location_assignment PIN_N20 -to highB[0]
+set_location_assignment PIN_F21 -to highC[6]
+set_location_assignment PIN_E22 -to highC[5]
+set_location_assignment PIN_E21 -to highC[4]
+set_location_assignment PIN_C19 -to highC[3]
+set_location_assignment PIN_C20 -to highC[2]
+set_location_assignment PIN_D19 -to highC[1]
+set_location_assignment PIN_E17 -to highC[0]
+set_location_assignment PIN_F18 -to lowB[6]
+set_location_assignment PIN_E20 -to lowB[5]
+set_location_assignment PIN_E19 -to lowB[4]
+set_location_assignment PIN_J18 -to lowB[3]
+set_location_assignment PIN_H19 -to lowB[2]
+set_location_assignment PIN_F19 -to lowB[1]
+set_location_assignment PIN_F20 -to lowB[0]
+set_location_assignment PIN_B20 -to lowC[6]
+set_location_assignment PIN_A20 -to lowC[5]
+set_location_assignment PIN_B19 -to lowC[4]
+set_location_assignment PIN_A21 -to lowC[3]
+set_location_assignment PIN_B21 -to lowC[2]
+set_location_assignment PIN_C22 -to lowC[1]
+set_location_assignment PIN_B22 -to lowC[0]
+set_location_assignment PIN_W10 -to b_blue
+set_location_assignment PIN_Y3 -to b_red -disable
+set_location_assignment PIN_V10 -to b
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:\\LIHI\\git\\DAC_SW" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE padding1.vhd
+set_location_assignment PIN_Y5 -to g
+set_instance_assignment -name IO_STANDARD "2.5 V" -to b_blue
+set_global_assignment -name VHDL_FILE output_files/pulse_sw.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

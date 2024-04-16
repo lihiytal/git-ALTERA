@@ -39,6 +39,13 @@ agreement for further details.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
+		(pt 0 64)
+		(input)
+		(text "b" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
+		(text "b" (rect 21 59 29 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
 		(pt 208 32)
 		(output)
 		(text "keyout[3..0]" (rect 0 0 70 19)(font "Intel Clear" (font_size 8)))
